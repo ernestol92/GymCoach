@@ -5,6 +5,7 @@ import BackButton from '../Components/BackButton';
 
 const ReportCategory = () => {
   const {action} = useParams();
+  const base = import.meta.env.BASE_URL;
   return (
     <>
       <div className='flex-col'>
@@ -18,7 +19,7 @@ const ReportCategory = () => {
               to="UpperBody" 
               className='center-card card-fx' 
               style={{
-                      backgroundImage: "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/UpperBody.png')",
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}UpperBody.png)`,
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
