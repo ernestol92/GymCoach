@@ -31,7 +31,7 @@ const ReportCategory = () => {
               to="LowerBody"
               className='center-card card-fx'
               style={{
-                    backgroundImage: "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/LowerBody.png')",
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}LowerBody.png)`,
                     backgroundSize: "cover",
                     backgroundPosition: "bottom"
 
@@ -43,7 +43,7 @@ const ReportCategory = () => {
             <Link 
             to="Cardio"className='center-card card-fx'
             style={{
-                    backgroundImage: "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/running.png')",
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}running.png)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center"
 
