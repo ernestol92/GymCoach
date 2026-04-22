@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 const BackButton = () => {
   const navigate = useNavigate()
+  const base = import.meta.env.BASE_URL;
 
   const handleBack = () => {
     navigate(-1)
@@ -15,7 +16,7 @@ const BackButton = () => {
         style={{ 
             width: '45px',
             height: '45px',
-            backgroundImage: 'url("/icons/chevron-left-white.svg")', 
+            backgroundImage: `url(${base}icons/chevron-left-white.svg)`, 
             backgroundSize: '20px 20px', 
             backgroundRepeat: 'no-repeat', 
             backgroundPosition: 'center',
