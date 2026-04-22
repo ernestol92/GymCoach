@@ -86,73 +86,76 @@ const ReportExercise = () => {
 
   return (
     <>
-        
-        <div className='exerciseList'>
-            <div className='backBtn-and-title'>
+        <div className='start-page-column'>
+            
+            <div>
                 <BackButton/>
-                <h2 className='exerciseName'>{exercise}</h2>
+                <h2 className='exerciseName breadCrumb'>{exercise}</h2>
             </div>
-            <LastTime exercise_id={exercise_id} />
-            <div className='reportSet'>
-                <div className='set mb '>
-                    <h3>Set {sets.length + 1}</h3>
-                </div>
-                <p>Reps:</p>
-                <input
-                    className='slider'
-                    type="range"
-                    min="0"
-                    max="30"
-                    value={reps}
-                    onChange={(e) => setReps(Number(e.target.value))}
-                />
-                <div className='btnWrapper mb3'>
-                    <button onClick={handleDecreaseReps} className='subAddBtn'>-</button>
+
+            <div className='exerciseList'>
+                <LastTime exercise_id={exercise_id} />
+                <div className='reportSet'>
+                    <div className='set mb '>
+                        <h3>Set {sets.length + 1}</h3>
+                    </div>
+                    <p>Reps:</p>
                     <input
-                        className='numberInput'
-                        type="number"
-                        inputMode="decimal"
-                        pattern="[0-9]*"
-                        step="1"
+                        className='slider'
+                        type="range"
+                        min="0"
+                        max="30"
                         value={reps}
                         onChange={(e) => setReps(Number(e.target.value))}
                     />
-                    <button onClick={handleIncreaseReps} className='subAddBtn'>+</button>
-                </div>
-                {/* ////////////////////////////////////Weight///////////////////////////////////  */}
-                <p>Weight:</p>
-                <input
-                    className='slider'
-                    type="range"
-                    min="0"
-                    max="300"
-                    value={weight}
-                    onChange={(e) => setWeight(Number(e.target.value))}
-                    
-                />
-                <div className='btnWrapper'>
-                    <button onClick={handleDecreaseWeight} className='subAddBtn'>-</button>
+                    <div className='btnWrapper mb3'>
+                        <button onClick={handleDecreaseReps} className='subAddBtn'>-</button>
+                        <input
+                            className='numberInput'
+                            type="number"
+                            inputMode="decimal"
+                            pattern="[0-9]*"
+                            step="1"
+                            value={reps}
+                            onChange={(e) => setReps(Number(e.target.value))}
+                        />
+                        <button onClick={handleIncreaseReps} className='subAddBtn'>+</button>
+                    </div>
+                    {/* ////////////////////////////////////Weight///////////////////////////////////  */}
+                    <p>Weight:</p>
                     <input
-                        className='numberInput'
-                        type="number"
-                        inputMode="decimal"
-                        pattern="[0-9]*"
-                        step="1"
+                        className='slider'
+                        type="range"
+                        min="0"
+                        max="300"
                         value={weight}
                         onChange={(e) => setWeight(Number(e.target.value))}
+                        
                     />
-                    <button onClick={handleIncreaseWeight} className='subAddBtn'>+</button>
+                    <div className='btnWrapper'>
+                        <button onClick={handleDecreaseWeight} className='subAddBtn'>-</button>
+                        <input
+                            className='numberInput'
+                            type="number"
+                            inputMode="decimal"
+                            pattern="[0-9]*"
+                            step="1"
+                            value={weight}
+                            onChange={(e) => setWeight(Number(e.target.value))}
+                        />
+                        <button onClick={handleIncreaseWeight} className='subAddBtn'>+</button>
+                    </div>
+                    <span className='mb3'>kg</span>
+                    <p>{sets.length} Sets reported</p>
+                    {sets.map((set, index) => <span className='reportedSets' key={index}>Set {index + 1}: {set.reps} reps, {set.weight}kg</span>)}
                 </div>
-                <span className='mb3'>kg</span>
-                <p>{sets.length} Sets reported</p>
-                {sets.map((set, index) => <span className='reportedSets' key={index}>Set {index + 1}: {set.reps} reps, {set.weight}kg</span>)}
-            </div>
-            <div className='mb3 reportWrapper'>
-                <button onClick={handleAddSet} className='addSet-btn'>+Set</button>
-                <Link to='/' onClick={handleSaveReport} className='add-btn'>Save</Link>
-            </div>
-            
+                <div className='reportWrapper'>
+                    <button onClick={handleAddSet} className='addSet-btn'>+Set</button>
+                    <Link to='/' onClick={handleSaveReport} className='add-btn'>Save</Link>
+                </div>
+                
 
+            </div>
         </div>
     </>
   )

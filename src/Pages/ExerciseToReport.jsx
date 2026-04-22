@@ -36,21 +36,24 @@ const ExerciseToReport = ({ mode }) => {
     
   return (
     <>
-        <div className='exerciseList'>
-            <div className='backBtn-and-title'>
+        <div className='start-page-column'>
+            <div>
                 <BackButton/>
-                <h2>{mode === "history" ? `History of ${group} exercises` : `${group} exercise to report: `}</h2>
+                <h2 className='breadCrumb'>{mode === "history" ? `History of ${group} exercises` : `${group} exercise to report: `}</h2>
             </div>
-            {(!exercises || exercises.length === 0) &&
-            <>
-                <p>No exercises found for this muscle group</p>
-                <CreateExerciseLinkBtn/>
-            </> 
-            }
-            {exercises.map((exercise) => (
-            <Link key={exercise} to={`${exercise}`} className='exerciseListBtn'>{exercise}</Link>
-            
-            ))}
+            <div className='exerciseList'>
+                {(!exercises || exercises.length === 0) &&
+                <>
+                    <p>No exercises found for this muscle group</p>
+                    <CreateExerciseLinkBtn/>
+                </> 
+                }
+                {exercises.map((exercise) => (
+                <Link key={exercise} to={`${exercise}`} className='exerciseListBtn'>{exercise}</Link>
+                
+                ))}
+            </div>
+
         </div>
     </>
   )

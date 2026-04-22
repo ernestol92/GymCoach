@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { db } from '../db/db'
+import BackButton from './BackButton'
 
 const ExtendedExerciseHistory = () => {
   const { exercise } = useParams()
@@ -63,6 +64,7 @@ const ExtendedExerciseHistory = () => {
   return (
     <div className="history-page">
       <div className="history-card-wrapper">
+        <BackButton className="justify-self-left"/>
         <div className="history-header">
           <h2 className="history-title">{exercise}</h2>
         </div>

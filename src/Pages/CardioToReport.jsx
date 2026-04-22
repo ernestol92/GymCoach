@@ -24,15 +24,17 @@ const CardioToReport = ({mode}) => {
 
   return (
     <>
-        <div className='exerciseList'>
+        <div className='start-page-column'>
             <div className='backBtn-and-title'>
                 <BackButton/>
-                <h2>{mode === "history" ? `History of ${group} exercises` : `${group} exercise to report: `}</h2>
+                <h2 className='breadCrumb'>{mode === "history" ? `History of ${group} exercises` : `${group} exercise to report: `}</h2>
             </div>
-            {cardioTypes.map((exercise) => (
-            <Link key={exercise} to={`${exercise}`} className='exerciseListBtn'>{exercise}</Link>
-            
-            ))}
+            <div className='exerciseList'>
+                {cardioTypes.map((exercise) => (
+                <Link key={exercise} to={`${exercise}`} className='exerciseListBtn'>{exercise}</Link>
+                
+                ))}
+            </div>
         </div>
     </>
   )

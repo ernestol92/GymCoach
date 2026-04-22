@@ -1,7 +1,8 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useState } from 'react';
 import { db } from '../db/db';
+import BackButton from '../Components/BackButton';
 
 const ReportCardio = () => {
     const { exercise } = useParams();
@@ -66,70 +67,77 @@ const ReportCardio = () => {
         }
   return (
     <>
-        <div className='exerciseList'>
-            <h2 className='exerciseName'>{exercise}</h2>
-            
-            <div className='reportSet'>
-                <div className='set mb3'>
-                    <h3>Interval</h3>
-                </div>
-                <p>Distance:</p>
-                <input
-                    className='slider'
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={distance}
-                    onChange={(e) => setDistance(parseInt(e.target.value))}
-                />
-                <div className='btnWrapper'>
-                    <button  className='subAddBtn' onClick={handleDecreaseDistance}>-</button>
+        <div className='start-page-column'>
+            <div>
+                <BackButton/>
+                <h2 className='exerciseName breadCrumb'>{exercise}</h2>
+            </div>
+
+            <div className='exerciseList'>
+                
+                
+                <div className='reportSet'>
+                    <div className='set mb3'>
+                        <h3>Interval</h3>
+                    </div>
+                    <p>Distance:</p>
                     <input
-                        className='numberInput'
-                        type="number"
-                        inputMode="decimal"
-                        pattern="[0-9]*"
-                        step="1"
+                        className='slider'
+                        type="range"
+                        min="0"
+                        max="100"
                         value={distance}
                         onChange={(e) => setDistance(parseInt(e.target.value))}
                     />
-                    <button className='subAddBtn' onClick={handleIncreaseDistance}>+</button>
-                    
-                </div>
-                <span className='mb3'>km</span>
-                {/* ////////////////////////////////////Weight///////////////////////////////////  */}
-                <p>Duration:</p>
-                <input
-                    className='slider'
-                    type="range"
-                    min="0"
-                    max="500"
-                    value={duration}
-                    onChange={(e) => setDuration(Number(e.target.value))}
-                />
-                <div className='btnWrapper'>
-                    <button className='subAddBtn' onClick={handleDecreaseDuration}>-</button>
+                    <div className='btnWrapper'>
+                        <button  className='subAddBtn' onClick={handleDecreaseDistance}>-</button>
+                        <input
+                            className='numberInput'
+                            type="number"
+                            inputMode="decimal"
+                            pattern="[0-9]*"
+                            step="1"
+                            value={distance}
+                            onChange={(e) => setDistance(parseInt(e.target.value))}
+                        />
+                        <button className='subAddBtn' onClick={handleIncreaseDistance}>+</button>
+                        
+                    </div>
+                    <span className='mb3'>km</span>
+                    {/* ////////////////////////////////////Weight///////////////////////////////////  */}
+                    <p>Duration:</p>
                     <input
-                        className='numberInput'
-                        type="number"
-                        inputMode="decimal"
-                        pattern="[0-9]*"
-                        step="1"
+                        className='slider'
+                        type="range"
+                        min="0"
+                        max="500"
                         value={duration}
                         onChange={(e) => setDuration(Number(e.target.value))}
                     />
-                    <button className='subAddBtn' onClick={handleIncreaseDuration}>+</button>
+                    <div className='btnWrapper'>
+                        <button className='subAddBtn' onClick={handleDecreaseDuration}>-</button>
+                        <input
+                            className='numberInput'
+                            type="number"
+                            inputMode="decimal"
+                            pattern="[0-9]*"
+                            step="1"
+                            value={duration}
+                            onChange={(e) => setDuration(Number(e.target.value))}
+                        />
+                        <button className='subAddBtn' onClick={handleIncreaseDuration}>+</button>
+                    </div>
+                    <span className='mb3'>min</span>
+                    <p> Intervals reported</p>
+                    {intervals.map((interval, index) => <span className='reportedSets' key={index}>Interval {index + 1}: {interval.distance} km, {interval.duration} min</span>)}
                 </div>
-                <span className='mb3'>min</span>
-                <p> Intervals reported</p>
-                {intervals.map((interval, index) => <span className='reportedSets' key={index}>Interval {index + 1}: {interval.distance} km, {interval.duration} min</span>)}
-            </div>
-            <div className='mb3 reportWrapper'>
-                <button className='addSet-btn' onClick={handleAddInterval}>+Interval</button>
-                <button className='add-btn' onClick={handleSaveReport}>Save</button>
-            </div>
-            
+                <div className='reportWrapper'>
+                    <button className='addSet-btn' onClick={handleAddInterval}>+ Interval</button>
+                    <Link to='/' className='add-btn' onClick={handleSaveReport}>Save</Link>
+                </div>
+                
 
+            </div>
         </div>
     </>
   )

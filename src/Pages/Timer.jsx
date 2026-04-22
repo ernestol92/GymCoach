@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import BackButton from '../Components/BackButton'
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0)
@@ -26,18 +27,23 @@ const Timer = () => {
   }
 
   return (
-    <div className="timer">
-      <h2>{formatTime(seconds)}</h2>
+    <>
+    <div className='start-page-column'>
+      <BackButton />
+      <div className="timer">
+        <h2>{formatTime(seconds)}</h2>
 
-      <div className="timer-controls">
-        {!isRunning ? (
-          <button className='timer-btn' onClick={() => setIsRunning(true)}>Start</button>
-        ) : (
-          <button className='timer-btn' onClick={() => setIsRunning(false)}>Pause</button>
-        )}
-        <button onClick={reset}>Reset</button>
+        <div className="timer-controls">
+          {!isRunning ? (
+            <button className='timer-btn' onClick={() => setIsRunning(true)}>Start</button>
+          ) : (
+            <button className='timer-btn' onClick={() => setIsRunning(false)}>Pause</button>
+          )}
+          <button onClick={reset}>Reset</button>
+        </div>
       </div>
     </div>
+    </>
   )
 }
 

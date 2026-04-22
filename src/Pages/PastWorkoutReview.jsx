@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { db } from '../db/db'
+import BackButton from '../Components/BackButton'
 
 const WorkoutHistory = () => {
   const [history, setHistory] = useState([])
@@ -89,7 +90,9 @@ const WorkoutHistory = () => {
 
   return (
     <div className="history-page">
+      
       <div className="history-card-wrapper">
+        <BackButton className="justify-self-left"/>
         <div className="history-header">
           <h2 className="history-title">Recent workouts</h2>
           <p className="history-subtitle">Latest 3 workout sessions</p>

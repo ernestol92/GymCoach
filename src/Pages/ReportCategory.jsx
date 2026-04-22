@@ -8,13 +8,12 @@ const ReportCategory = () => {
   const base = import.meta.env.BASE_URL;
   return (
     <>
-      <div className='flex-col'>
-        <div className='backBtn-and-title'>
+      <div className='start-page-column'>
+        <div>
           <BackButton/>
           <h2 className='breadCrumb'>{action ? "History" : "Report"}</h2>
 
         </div>
-        <div className='start-page-column'>
             <Link 
               to="UpperBody" 
               className='center-card card-fx' 
@@ -50,7 +49,7 @@ const ReportCategory = () => {
                   }}>
                 Cardio
             </Link>
-        </div>
+        
       </div>
     </>
   )

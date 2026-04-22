@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { db } from '../db/db'
+import BackButton from '../Components/BackButton'
 
 const BackupData = () => {
   const fileInputRef = useRef(null)
@@ -108,6 +109,7 @@ const BackupData = () => {
 
   return (
     <div className="backup-page">
+      <BackButton/>
       <div className="backup-card">
         <h1 className="backup-title">Backup</h1>
         <p className="backup-text">

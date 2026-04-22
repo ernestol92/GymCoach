@@ -31,16 +31,16 @@
   font-family: "Orbitron", sans-serif;
 }
 
-.container{
-  display: flex;
-  width: 100vw;
-}
+
 
 .wrapper{
+  width: 100%;
+  max-width: 430px; 
+  margin: 0 auto;   
+  min-height: 100vh;
+  background: #0f0f0f;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
 }
 .content {
   flex: 1;              /* takes remaining space */
@@ -52,9 +52,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-  width: 100vw;
-
+  padding: 1rem;
+  width: 100%;
+  border-bottom: #444 solid 1px;
 }
 
 .Navbar-icons{
@@ -73,24 +73,8 @@
   display: flex;
   justify-content: center;
   height: min-content;
-}
-
-.backBtn-and-title{
-  position: relative;
-  display: flex;
-  width: 100vw;
-  padding: 2rem;
-
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-
-  button{
-    position: absolute;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .inspirationBtn{
@@ -106,9 +90,9 @@
 
 .start-page-column{
     display: flex;
-    width: 100vw;
+    width: 430px;
     padding: 2rem;
-    gap: 2rem;
+    gap: 1rem;
     flex-direction: column;
     justify-content: start;
 
@@ -116,10 +100,7 @@
 
 .grid{
   display: grid;
-  width: 100vw;
-  gap: 2rem;
-  height: 250px;
-  padding: 2rem;
+  gap: 1rem;
 }
 
 .grid:has(:nth-child(-n+2):last-child) {
@@ -210,7 +191,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   border-radius: 1rem;
   text-decoration: none;
   font-size: 2rem;
@@ -228,8 +208,8 @@
   border: 1px solid #444;
   /* box-shadow: 0 0 20px 1px #888; */
 }
-.p-1{
-  padding: 1rem;
+.p-2{
+  padding: 2rem;
 }
 .selectStyle{
   margin-bottom: 2rem;
@@ -251,6 +231,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
 .footer{
@@ -258,9 +239,11 @@
   justify-content: space-between;
   border-top: 1px solid #444;
   font-size: 1rem;
-  width: 100vw;
+  width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 0.5rem;
+  height: 80px;
 }
 
 
@@ -272,17 +255,16 @@
 
 
 .input{
-  margin-top: .5rem;
   padding: 1rem;
   font-size: 1rem;
   border-radius: 8px;
+  width: 100%;
 }
 
 .add-btn{
   background-color: #BAF600;
   border-radius: 1rem;
   padding: 1rem;
-  margin-top: 2rem;
   border: 1px solid #444;
   font-size: 1.3rem;
   text-decoration: none;
@@ -297,6 +279,7 @@
   align-items: center;
   gap: 5rem;
   font-size: 4rem;
+  margin-top: 5rem;
 }
 
 .timer-controls{
@@ -311,13 +294,14 @@
 }
 .exerciseList{
   display: flex;
+  height: inherit;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
   justify-content: start;
 }
 .exerciseListBtn{
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   background-color: #121212;
   font-size: 1.2rem;
@@ -329,14 +313,14 @@
 .reportSet{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
   align-items: center;
   background: linear-gradient(to bottom left, #151F00, #1C1B1B 50%);
-  width: 80%;
+  width: 100%;
   border: 1px solid #444;
   border-radius: 1rem;
   overflow: hidden;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 
   p {
     background-color: transparent;
@@ -353,7 +337,8 @@
   display: flex;
   background-color: #BAF600;
   width: 100%;
-  padding: 1rem;
+  padding: .5rem;
+  padding-left: 1rem;
   
   h3{
     background-color: transparent;
@@ -422,7 +407,7 @@
   background-color: #ff5100;
   border-radius: 1rem;
   padding: 1rem;
-  margin-top: 2rem;
+  
   border: 1px solid #444;
   font-size: 1.3rem;
   text-shadow: #0b0d10 1px 1px 2px;
@@ -456,7 +441,7 @@
   border-radius: 1rem;
   border: 1px solid #444;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 
@@ -492,21 +477,10 @@
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  padding: 1rem;
   height: 600px;
+  align-items: center;
 }
 
-.exercise-history-card{
-  background-color: rgb(131, 189, 255);
-  height: auto;
-  margin: 1rem;
-  border: 1px solid #444;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  width: 100%;
-}
 
 .custom-calendar{
   height: auto;
@@ -598,12 +572,6 @@
 
 /* AI GEN  */ 
 
-.history-page {
-  display: flex;
-  justify-content: center;
-  padding: 1.5rem 1rem 5rem;
-}
-
 .history-card-wrapper {
   width: min(100%, 750px);
   display: flex;
@@ -613,6 +581,9 @@
 
 .history-header {
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .history-title {
@@ -629,13 +600,7 @@
   text-transform: capitalize;
 }
 
-.exercise-history-card {
-  background: #151515;
-  border: 1px solid #262626;
-  border-radius: 18px;
-  padding: 1rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
+
 
 .empty-card {
   text-align: center;
@@ -742,7 +707,7 @@
 .history-page {
   display: flex;
   justify-content: center;
-  padding: 1.25rem 1rem 5rem;
+  padding: 2rem;
   min-height: 100vh;
   background: #0f0f0f;
 }
@@ -753,17 +718,11 @@
   flex-direction: column;
   gap: 1rem;
   height: 100%;
+  align-items: start;
 }
 
 .history-header {
   margin-bottom: 0.25rem;
-}
-
-.history-title {
-  margin: 0;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 800;
 }
 
 .history-subtitle {
@@ -779,6 +738,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  width: 100%;
 }
 
 .empty-card {
@@ -839,9 +800,6 @@
 }
 
 @media (max-width: 640px) {
-  .history-title {
-    font-size: 1.5rem;
-  }
 
   .set-table-head,
   .set-table-row {
@@ -858,10 +816,12 @@
 .backup-page {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: flex-start;
-  padding: 2rem 1rem 6rem;
+  padding: 2rem;
   background: #0f0f0f;
+  gap: 2rem;
 }
 
 .backup-card {
@@ -934,4 +894,8 @@
   margin-top: 1rem;
   color: #d7d7d7;
   font-size: 0.95rem;
+}
+
+.justify-self-left{
+  justify-self: left;
 }

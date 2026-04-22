@@ -73,7 +73,7 @@ const handleAddExercise = async () => {
 
 
   return (
-    <div className='p-1'>
+    <div className='p-2'>
         <div className='backBtn-and-title'>
           <BackButton/>
           <h2 className='breadCrumb'>Add Exercise</h2>

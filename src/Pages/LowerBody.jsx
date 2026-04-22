@@ -6,7 +6,7 @@ const LowerBody = ({ mode }) => {
   const base = import.meta.env.BASE_URL;
   return (
     <>
-      <div className='flex-col'>
+      <div className='start-page-column'>
         <div className='backBtn-and-title'>
           <BackButton/>
           <h2 className='breadCrumb'>{mode === "history" ? "History" : "Report"}</h2>
