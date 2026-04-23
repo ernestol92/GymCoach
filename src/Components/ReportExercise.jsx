@@ -5,7 +5,10 @@ import { db } from '../db/db';
 import LastTime from './LastTime';
 import BackButton from '../Components/BackButton';
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom';
+
 const ReportExercise = () => {
+    const navigate = useNavigate();
     const { t } = useTranslation();
     const { exercise } = useParams();
     const [reps, setReps] = useState(0)
@@ -80,7 +83,7 @@ const ReportExercise = () => {
         setSets([]);
         setReps(0);
         setWeight(0);
-       
+        navigate('/');
     }
 
 
@@ -151,7 +154,7 @@ const ReportExercise = () => {
                 </div>
                 <div className='reportWrapper'>
                     <button onClick={handleAddSet} className='addSet-btn'>{t("reportexercise.addSet")}</button>
-                    <Link to='/' onClick={handleSaveReport} className='add-btn'>{t("reportexercise.save")}</Link>
+                    <button onClick={handleSaveReport} className='add-btn'>{t("reportexercise.save")}</button>
                 </div>
                 
 
