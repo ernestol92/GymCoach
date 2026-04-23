@@ -39,9 +39,7 @@ const handleAddExercise = async () => {
       type: type.trim().toLowerCase()
     });
     if (type === "strength" && isMuscle){
-        console.log(isMuscle);
         const muscle = await db.muscles.get({ muscle: isMuscle });
-        console.log('muscle fetched:', muscle);
         if (muscle) {
           await db.exerciseMuscles.add({
             exercise_id: exerciseId,
@@ -49,7 +47,6 @@ const handleAddExercise = async () => {
           });
       }
     }
-    console.log(isMuscle, type);
     setExerciseName("");
     setIsMuscle("");
     setSaved(true);
