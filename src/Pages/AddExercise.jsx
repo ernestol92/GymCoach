@@ -6,23 +6,30 @@ import { useTranslation } from 'react-i18next'
 
 
 const AddExercise = () => {
-  const { t } = useTranslation();
-  //const [type, setType] = useState("")
-  const [isSaving, setIsSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
-  const [category, setCategory] = useState("")
-  const [isMuscle, setIsMuscle] = useState("")
-  const [exerciseName, setExerciseName] = useState("")
-  const navigate = useNavigate();
-  const muscles = {
-    upper: [t('keywords.chest'), t('keywords.back'), t('keywords.shoulders'), t('keywords.arms'), t('keywords.core')],
-    lower: [t('keywords.quads'), t('keywords.hamstrings'), t('keywords.glutes'), t('keywords.calves')]
-  }
-  const type = category === "cardio" ? "cardio" : "strength";
-  const [error, setError] = useState("");
+
+const { t } = useTranslation();
+//const [type, setType] = useState("")
+const [isSaving, setIsSaving] = useState(false);
+const [saved, setSaved] = useState(false);
+const [category, setCategory] = useState("")
+const [isMuscle, setIsMuscle] = useState("")
+const [exerciseName, setExerciseName] = useState("")
+const navigate = useNavigate();
+const type = category === "cardio" ? "cardio" : "strength";
+const [error, setError] = useState("");
+
+const muscles = {
+  upper: ['chest', 'back', 'shoulders', 'arms', 'core'],
+  lower: ['quads', 'hamstrings', 'glutes', 'calves']
+}
+
+// const muscles = {
+//   upper: [t('keywords.chest'), t('keywords.back'), t('keywords.shoulders'), t('keywords.arms'), t('keywords.core')],
+//   lower: [t('keywords.quads'), t('keywords.hamstrings'), t('keywords.glutes'), t('keywords.calves')]
+// }
 
 const handleAddExercise = async () => {
-  
+
   if (!exerciseName || isSaving) return;
 
   // 1. Create exercise
@@ -31,9 +38,10 @@ const handleAddExercise = async () => {
       exercise: exerciseName.trim().toLowerCase(),
       type: type.trim().toLowerCase()
     });
-
     if (type === "strength" && isMuscle){
+        console.log(isMuscle);
         const muscle = await db.muscles.get({ muscle: isMuscle });
+        console.log('muscle fetched:', muscle);
         if (muscle) {
           await db.exerciseMuscles.add({
             exercise_id: exerciseId,
@@ -41,8 +49,9 @@ const handleAddExercise = async () => {
           });
       }
     }
+    console.log(isMuscle, type);
     setExerciseName("");
-    //setIsMuscle("");
+    setIsMuscle("");
     setSaved(true);
     setIsSaving(false);
   
@@ -86,24 +95,37 @@ const handleAddExercise = async () => {
             <option value="cardio">{t('keywords.cardio')}</option>
         </select>
         
-
-
         {category === "upper" && (
-          <select name="Category" id="" className='selectStyle' onChange={(e) => {setIsMuscle(e.target.value), setExerciseName("")}}>
+          <select
+            className='selectStyle'
+            onChange={(e) => {
+              setIsMuscle(e.target.value)
+              setExerciseName("")
+            }}
+          >
             <option value="">{t('selectMuscle')}</option>
-            {muscles.upper.map(muscle => (
-              <option key={muscle.toLowerCase()} value={muscle.toLowerCase()}>{muscle}</option>
+            {muscles.upper.map((muscle) => (
+              <option key={muscle} value={muscle}>
+                {t(`keywords.${muscle}`)}
+              </option>
             ))}
-        </select>
+          </select>
         )}
-        
         {category === "lower" && (
-          <select name="Category" id="" className='selectStyle' onChange={(e) => {setIsMuscle(e.target.value), setExerciseName("")}}>
+          <select
+            className='selectStyle'
+            onChange={(e) => {
+              setIsMuscle(e.target.value)
+              setExerciseName("")
+            }}
+          >
             <option value="">{t('selectMuscle')}</option>
-            {muscles.lower.map(muscle => (
-              <option key={muscle.toLowerCase()} value={muscle.toLowerCase()}>{muscle}</option>
+            {muscles.lower.map((muscle) => (
+              <option key={muscle} value={muscle}>
+                {t(`keywords.${muscle}`)}
+              </option>
             ))}
-        </select>
+          </select>
         )}
 
         {category === "cardio" && (

@@ -2,9 +2,9 @@ import Dexie from "dexie";
 
 export const db = new Dexie("gymApp")
 //kom ih[g att ändra versionen]
-db.version(4).stores({
+db.version(5).stores({
     exercises: "++id, &exercise, type",
-    muscles: "++id, muscle, muscleRegion",
+    muscles: "++id, &muscle, muscleRegion",
     exerciseMuscles: "++id, exercise_id, muscle_id",
     history: "++id, session_id, exercise_id, date, sets, reps, weight, duration, distance, [exercise_id+date]"
 })
@@ -13,7 +13,7 @@ export const seedMuscles = async () => {
   const count = await db.muscles.count();
   if (count > 0) return;
 
-  await db.muscles.bulkAdd([
+  await db.muscles.bulkPut([
     { muscle: "chest", muscleRegion: "upper" },
     { muscle: "back", muscleRegion: "upper" },
     { muscle: "shoulders", muscleRegion: "upper" },
