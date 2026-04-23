@@ -37,15 +37,17 @@
   width: 100%;
   max-width: 430px; 
   margin: 0 auto;   
-  min-height: 100vh;
+  height: 100vh;
   background: #0f0f0f;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .content {
   flex: 1;              /* takes remaining space */
-  overflow-y: auto;     /* THIS enables scrolling */
-  width: 100vw;
+  overflow-y: auto;
+  width: 100%;
+  min-height: 0;     /* THIS enables scrolling */
 }
 
 .header{
@@ -90,7 +92,8 @@
 
 .start-page-column{
     display: flex;
-    width: 430px;
+    width: 100%;
+    max-width: 430px;
     padding: 2rem;
     gap: 1rem;
     flex-direction: column;
@@ -240,6 +243,7 @@
   border-top: 1px solid #444;
   font-size: 1rem;
   width: 100%;
+  max-width: 430px;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
