@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { db } from "../db/db.js";
 import { useNavigate } from 'react-router-dom';
 import BackButton from '../Components/BackButton';
-
+import { useTranslation } from 'react-i18next'
 
 
 const AddExercise = () => {
+  const { t } = useTranslation();
   //const [type, setType] = useState("")
   const [isSaving, setIsSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -14,8 +15,8 @@ const AddExercise = () => {
   const [exerciseName, setExerciseName] = useState("")
   const navigate = useNavigate();
   const muscles = {
-    upper: ["Chest", "Back", "Shoulders", "Arms", "Core"],
-    lower: ["Quads", "Hamstrings", "Glutes", "Calves"]
+    upper: [t('keywords.chest'), t('keywords.back'), t('keywords.shoulders'), t('keywords.arms'), t('keywords.core')],
+    lower: [t('keywords.quads'), t('keywords.hamstrings'), t('keywords.glutes'), t('keywords.calves')]
   }
   const type = category === "cardio" ? "cardio" : "strength";
   const [error, setError] = useState("");
@@ -76,20 +77,20 @@ const handleAddExercise = async () => {
     <div className='p-2'>
         <div className='backBtn-and-title'>
           <BackButton/>
-          <h2 className='breadCrumb'>Add Exercise</h2>
+          <h2 className='breadCrumb'>{t('addExercise')}</h2>
         </div>
         <select name="Category" id="" className='selectStyle mt' onChange={ (e) => {setCategory(e.target.value), setIsMuscle(null), setExerciseName("")}}>
-            <option value="">Select Category</option>
-            <option value="upper">Upper Body</option>
-            <option value="lower">Lower Body</option>
-            <option value="cardio">Cardio</option>
+            <option value="">{t('selectCategory')}</option>
+            <option value="upper">{t('keywords.upperbody')}</option>
+            <option value="lower">{t('keywords.lowerbody')}</option>
+            <option value="cardio">{t('keywords.cardio')}</option>
         </select>
         
 
 
         {category === "upper" && (
           <select name="Category" id="" className='selectStyle' onChange={(e) => {setIsMuscle(e.target.value), setExerciseName("")}}>
-            <option value="">Select Muscle</option>
+            <option value="">{t('selectMuscle')}</option>
             {muscles.upper.map(muscle => (
               <option key={muscle.toLowerCase()} value={muscle.toLowerCase()}>{muscle}</option>
             ))}
@@ -98,7 +99,7 @@ const handleAddExercise = async () => {
         
         {category === "lower" && (
           <select name="Category" id="" className='selectStyle' onChange={(e) => {setIsMuscle(e.target.value), setExerciseName("")}}>
-            <option value="">Select Muscle</option>
+            <option value="">{t('selectMuscle')}</option>
             {muscles.lower.map(muscle => (
               <option key={muscle.toLowerCase()} value={muscle.toLowerCase()}>{muscle}</option>
             ))}
@@ -107,29 +108,34 @@ const handleAddExercise = async () => {
 
         {category === "cardio" && (
           <div className='flex-col'>
-            <label htmlFor="">Exercise Name:</label>
+            <label htmlFor="">{t('exerciseName')}:</label>
             <input 
               className='input' 
               type="text" 
-              placeholder='Exercise Name' 
+              placeholder={t('exerciseName')} 
               value={exerciseName} 
               onChange={(e)=>setExerciseName(e.target.value)}/>
 
-            <button className='add-btn' disabled={!exerciseName} onClick={handleAddExercise}>Add</button>
+            <button className='add-btn' disabled={!exerciseName} onClick={handleAddExercise}>{t('add')}</button>
           </div>
         )}
 
         {isMuscle && (
           <div className='flex-col'>
-            <label htmlFor="">Exercise Name:</label>
+            <label htmlFor="">{t('exerciseName')}:</label>
             <input 
               className='input' 
               type="text" 
-              placeholder='Exercise Name' 
+              placeholder={t('exerciseName')} 
               value={exerciseName} 
               onChange={(e)=>setExerciseName(e.target.value)}/>
 
-            <button className='add-btn' disabled={isSaving || !exerciseName} onClick={handleAddExercise}>{isSaving ? "Saving..." : saved ? "Saved ✓" : "Add"}</button>
+            <button 
+              className='add-btn' 
+              disabled={isSaving || !exerciseName} 
+              onClick={handleAddExercise}
+              >{isSaving? t("saving"): saved? t("saved"): t("add")}
+            </button>
             {error && <p className="text-red-500 text-sm">{error}</p>}
           </div>
         )}

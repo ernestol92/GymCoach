@@ -2,16 +2,18 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import BackButton from '../Components/BackButton';
+import { useTranslation } from 'react-i18next'
 
 const ReportCategory = () => {
   const {action} = useParams();
   const base = import.meta.env.BASE_URL;
+  const { t } = useTranslation();
   return (
     <>
       <div className='start-page-column'>
         <div>
           <BackButton/>
-          <h2 className='breadCrumb'>{action ? "History" : "Report"}</h2>
+          <h2 className='breadCrumb'>{action ? t('keywords.history') : t('keywords.report')}</h2>
 
         </div>
             <Link 
@@ -23,7 +25,7 @@ const ReportCategory = () => {
                       backgroundPosition: "center"
 
                     }}>
-                Upper Body
+                {t('keywords.upperbody')}
             </Link>
 
             <Link 
@@ -35,7 +37,7 @@ const ReportCategory = () => {
                     backgroundPosition: "bottom"
 
                     }}>
-                Lower Body
+                {t('keywords.lowerbody')}
             </Link>
 
 
@@ -47,7 +49,7 @@ const ReportCategory = () => {
                     backgroundPosition: "center"
 
                   }}>
-                Cardio
+                {t('keywords.cardio')}
             </Link>
         
       </div>

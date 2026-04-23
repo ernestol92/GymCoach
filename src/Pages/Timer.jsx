@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import BackButton from '../Components/BackButton'
+import { useTranslation } from 'react-i18next'
 
 const Timer = () => {
+  const { t } = useTranslation();
   const [seconds, setSeconds] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
 
@@ -35,11 +37,11 @@ const Timer = () => {
 
         <div className="timer-controls">
           {!isRunning ? (
-            <button className='timer-btn' onClick={() => setIsRunning(true)}>Start</button>
+            <button className='timer-btn' onClick={() => setIsRunning(true)}>{t("timer.start")}</button>
           ) : (
-            <button className='timer-btn' onClick={() => setIsRunning(false)}>Pause</button>
+            <button className='timer-btn' onClick={() => setIsRunning(false)}>{t("timer.pause")}</button>
           )}
-          <button onClick={reset}>Reset</button>
+          <button onClick={reset}>{t("timer.reset")}</button>
         </div>
       </div>
     </div>

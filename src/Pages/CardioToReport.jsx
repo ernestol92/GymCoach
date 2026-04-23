@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { db } from '../db/db';
 import BackButton from '../Components/BackButton';
+import { useTranslation } from 'react-i18next'
 
 const CardioToReport = ({mode}) => {
-
+    const { t } = useTranslation();
     const { group } = useParams();
     const [cardioTypes, setCardioTypes] = useState([]);
 
@@ -27,7 +28,11 @@ const CardioToReport = ({mode}) => {
         <div className='start-page-column'>
             <div className='backBtn-and-title'>
                 <BackButton/>
-                <h2 className='breadCrumb'>{mode === "history" ? `History of ${group} exercises` : `${group} exercise to report: `}</h2>
+                <h2 className='breadCrumb'>
+                {mode === "history"
+                    ? t('group.historyTitle', { group: t(`keywords.${group.toLowerCase()}`) })
+                    : t('group.reportTitle', { group: t(`keywords.${group.toLowerCase()}`) })}
+                </h2>
             </div>
             <div className='exerciseList'>
                 {cardioTypes.map((exercise) => (

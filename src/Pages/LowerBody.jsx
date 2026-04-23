@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import BackButton from '../Components/BackButton';
+import { useTranslation } from 'react-i18next'
 
 const LowerBody = ({ mode }) => {
+  const { t } = useTranslation();
   const base = import.meta.env.BASE_URL;
   return (
     <>
       <div className='start-page-column'>
         <div className='backBtn-and-title'>
           <BackButton/>
-          <h2 className='breadCrumb'>{mode === "history" ? "History" : "Report"}</h2>
+          <h2 className='breadCrumb'>{mode === "history" ? t('keywords.history') : t('keywords.report')}</h2>
 
         </div>
         <div className='grid'>
@@ -21,7 +23,7 @@ const LowerBody = ({ mode }) => {
                                   backgroundSize: "cover",
                                   backgroundPosition: "center"
             
-                                }}>Quads</Link>
+                                }}>{t("keywords.quads")}</Link>
 
           <Link 
             to="Hamstring" 
@@ -31,7 +33,7 @@ const LowerBody = ({ mode }) => {
                                   backgroundSize: "cover",
                                   backgroundPosition: "center"
             
-                                }}>Hamstring</Link>
+                                }}>{t("keywords.hamstrings")}</Link>
 
           <Link 
             to="Glutes" 
@@ -41,7 +43,7 @@ const LowerBody = ({ mode }) => {
                                   backgroundSize: "cover",
                                   backgroundPosition: "center"
             
-                                }}>Glutes</Link>
+                                }}>{t("keywords.glutes")}</Link>
 
           <Link 
             to="Calves" 
@@ -51,7 +53,7 @@ const LowerBody = ({ mode }) => {
                                   backgroundSize: "cover",
                                   backgroundPosition: "center"
             
-                                }}>Calves</Link>
+                                }}>{t("keywords.calves")}</Link>
     
         </div>
       </div>

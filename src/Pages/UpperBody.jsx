@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import BackButton from '../Components/BackButton';
+import { useTranslation } from 'react-i18next'
 
 const UpperBody = ({ mode }) => {
+  const { t } = useTranslation();
   const base = import.meta.env.BASE_URL;
   return (
     <>
       <div className='start-page-column'>
       <div className='backBtn-and-title'>
         <BackButton/>
-        <h2 className='breadCrumb'>{mode === "history" ? "History" : "Report"}</h2>
+        <h2 className='breadCrumb'>{mode === "history" ? t('keywords.history') : t('keywords.report')}</h2>
 
       </div>
         <div className='grid'>
@@ -21,7 +23,7 @@ const UpperBody = ({ mode }) => {
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
-                    }}>Chest</Link>
+                    }}>{t('keywords.chest')}</Link>
 
           <Link 
             to="Back" 
@@ -31,7 +33,7 @@ const UpperBody = ({ mode }) => {
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
-                    }}>Back</Link>
+                    }}>{t('keywords.back')}</Link>
 
           <Link 
             to="Shoulders" 
@@ -41,7 +43,7 @@ const UpperBody = ({ mode }) => {
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
-                    }}>Shoulders</Link>
+                    }}>{t('keywords.shoulders')}</Link>
 
           <Link 
             to="Arms" 
@@ -51,7 +53,7 @@ const UpperBody = ({ mode }) => {
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
-                    }}>Arms</Link>
+                    }}>{t('keywords.arms')}</Link>
 
           <Link 
             to="Core" 
@@ -61,7 +63,7 @@ const UpperBody = ({ mode }) => {
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
-                    }}>Core</Link>
+                    }}>{t('keywords.core')}</Link>
 
         </div>
 

@@ -3,9 +3,11 @@ import { Link, useParams } from 'react-router-dom'
 import { db } from '../db/db';
 import BackButton from '../Components/BackButton';
 import CreateExerciseLinkBtn from '../Components/CreateExerciseLinkBtn';
+import { useTranslation } from 'react-i18next'
 
 const ExerciseToReport = ({ mode }) => {
     const { group } = useParams();
+    const { t } = useTranslation();
 
     const [exercises, setExercises] = useState([]);
 
@@ -39,12 +41,16 @@ const ExerciseToReport = ({ mode }) => {
         <div className='start-page-column'>
             <div>
                 <BackButton/>
-                <h2 className='breadCrumb'>{mode === "history" ? `History of ${group} exercises` : `${group} exercise to report: `}</h2>
+                <h2 className='breadCrumb'>
+                    {mode === "history"
+                        ? t('group.historyTitle', { group: t(`keywords.${group.toLowerCase()}`) })
+                        : t('group.reportTitle', { group: t(`keywords.${group.toLowerCase()}`) })}
+                </h2>
             </div>
             <div className='exerciseList'>
                 {(!exercises || exercises.length === 0) &&
                 <>
-                    <p>No exercises found for this muscle group</p>
+                    <p>{t('group.notFound')}</p>
                     <CreateExerciseLinkBtn/>
                 </> 
                 }

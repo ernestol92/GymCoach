@@ -1,0 +1,127 @@
+{
+
+  "welcome": {
+    "title": "Ready to",
+    "title2": "crush it?",
+    "description": "Your personal workout companion"
+  },
+
+  "start": {
+    "report": "Report",
+    "reportDesc": "Log the current exercise you are performing",
+
+    "addExercise": "Add Exercise",
+    "addExerciseDesc": "Add a new exercise to your workout catalog",
+
+    "timer": "Timer",
+    "timerDesc": "Set a timer for your exercise",
+
+    "history": "History",
+    "historyDesc": "View your workout history",
+
+    "export": "Export Data",
+    "exportDesc": "Export your workout data to your device"
+  },
+
+  "keywords": {
+    "exercise": "Exercise",
+    "reps": "Reps",
+    "set": "Set",
+    "sets": "Sets",
+    "weight": "Weight",
+    "duration": "Duration",
+    "upperbody": "Upper Body",
+    "lowerbody": "Lower Body",
+    "cardio": "Cardio",
+    
+    "report": "Report",
+    "history": "History",
+
+
+    "chest": "Chest",
+    "back": "Back",
+    "shoulders": "Shoulders",
+    "arms": "Arms",
+    "core": "Core",
+
+    "quads": "Quads",
+    "hamstrings": "Hamstrings",
+    "calves": "Calves",
+    "glutes": "Glutes"
+  },
+
+  "group": {
+    "reportTitle": "Report your {{group}} exercises",
+    "historyTitle": "History of {{group}} exercises"
+  },
+
+  "lastTime": {
+    "title": "Last time",
+    "never": "Never",
+    "noData": "No data"
+    },
+
+  "reportexercise": {
+    "setsReported": "sets reported",
+    "addSet":"+ Set",
+    "save": "Save"
+    },
+
+  "createExerciseBtn": "Create Exercise",
+  
+  "reportCardio": {
+    "interval": "Interval",
+    "distance": "Distance (km)",
+    "duration": "Duration (min)",
+    "intervalReported": "Registered intervals"
+  },
+
+  "addExercise": "Add exercise",
+  "selectCategory": "Select Category",
+  "selectMuscle": "Select Muscle",
+  "exerciseName": "Exercise name",
+  "add": "Add",
+  "saving": "Saving...",
+  "saved": "Saved ✓",
+
+  "timer": {
+    "start": "Start",
+    "pause": "Pause",
+    "reset": "Reset"
+  },
+
+  "historyToSee": {
+    "exerciseHistory": "Exercise History",
+    "workoutHistory": "Workout History"
+  },
+
+  "extendedHistory": {
+    "bestWeight": "Best weight",
+    "totalReps": "Total reps"
+  },
+
+  "workoutReview": {
+    "title": "Workout Review",
+    "3latest": "Your 3 Latest Workouts",
+    "entries": "Entries",
+    "exercise": "Exercise",
+    "totalRepTime": "Reps / Time",
+    "totalWeightDistance": "Weight / Distance",
+    "noData": "No workout data available"
+    },
+
+  "backupData": {
+    "title": "Backup",
+    "description": "Export your local workout data to a file or import a previous backup.",
+    "export": "Export",
+    "exporting": "Exporting...",
+    "import": "Import",
+    "importing": "Importing...",
+    "warning": "Import will replace your current local data.",
+    "exportSuccess": "Export completed successfully.",
+    "exportFailed": "Something went wrong while exporting your data.",
+    "importSuccess": "Import completed successfully.",
+    "importFailed": "Import failed. Please check that the file is a valid backup."
+    }
+  
+}

@@ -1,0 +1,125 @@
+{
+  "welcome": {
+    "title": "Dags att",
+    "title2": "träna?",
+    "description": "Din träningspartner"
+  },
+
+  "start": {
+    "report": "Registrera",
+    "reportDesc": "Logga den övning du utför just nu",
+
+    "addExercise": "Lägg till övning",
+    "addExerciseDesc": "Lägg till en ny övning i din träningslista",
+
+    "timer": "Timer",
+    "timerDesc": "Sätt en timer för din träning",
+
+    "history": "Historik",
+    "historyDesc": "Se din träningshistorik",
+
+    "export": "Exportera data",
+    "exportDesc": "Exportera din träningsdata till din enhet"
+  },
+
+  "keywords": {
+    "exercise": "Övning",
+    "reps": "Reps",
+    "set": "Set",
+    "sets": "Set",
+    "weight": "Vikt",
+    "duration": "Tid",
+    "upperbody": "Överkropp",
+    "lowerbody": "Underkropp",
+    "cardio": "Kondition",
+
+    "report": "Registrera",
+    "history": "Historik",
+
+    "chest": "Bröst",
+    "back": "Rygg",
+    "shoulders": "Axlar",
+    "arms": "Armar",
+    "core": "Bål",
+
+    "quads": "Framsida lår",
+    "hamstrings": "Baksida lår",
+    "calves": "Vader",
+    "glutes": "Säte"
+    },
+
+  "group": {
+    "reportTitle": "Registrera dina {{group}}-övningar",
+    "historyTitle": "Historik för {{group}}-övningar",
+    "notFound": "Inga övningar hittades för denna muskelgrupp"
+    },
+  
+  "lastTime": {
+    "title": "Senast",
+    "never": "Aldrig",
+    "noData": "Ingen data"
+    },
+
+  "reportexercise": {
+    "addSet": "+ Set",
+    "save": "Spara",
+    "setsReported": "set registrerade"
+    },
+
+  "createExerciseBtn": "Skapa övning",
+
+  "reportCardio": {
+    "interval": "Intervall",
+    "distance": "Distans (km)",
+    "duration": "Tid (min)",
+    "intervalReported": "Registrerade Intervaller"
+  },
+
+  "addExercise": "Lägg till övning",
+  "selectCategory": "Välj kategori",
+  "selectMuscle": "Välj muskel",
+  "exerciseName": "Namn på övning",
+  "add": "Lägg till",
+  "saving": "Sparar...",
+  "saved": "Sparad ✓",
+
+  "timer": {
+    "start": "Starta",
+    "pause": "Pausa",
+    "reset": "Återställ"
+  },
+
+  "historyToSee": {
+    "exerciseHistory": "Övningshistorik",
+    "workoutHistory": "Pass historik"
+  },
+
+  "extendedHistory": {
+    "bestWeight": "Bästa vikt",
+    "totalReps": "Totalt antal reps"
+  },
+
+  "workoutReview": {
+    "title": "Passöversikt",
+    "3latest": "Dina 3 senaste pass",
+    "entries": "Inlägg",
+    "exercise": "Övning",
+    "totalRepTime": "Reps / Tid",
+    "totalWeightDistance": "Vikt / Distans",
+    "noData": "Ingen data att visa"
+    },
+
+  "backupData": {
+    "title": "Backup",
+    "description": "Exportera din lokala träningsdata till en fil eller importera en tidigare backup.",
+    "export": "Exportera",
+    "exporting": "Exporterar...",
+    "import": "Importera",
+    "importing": "Importerar...",
+    "warning": "Import kommer att ersätta din nuvarande lokala data.",
+    "exportSuccess": "Exporten slutfördes.",
+    "exportFailed": "Något gick fel när din data skulle exporteras.",
+    "importSuccess": "Importen slutfördes.",
+    "importFailed": "Importen misslyckades. Kontrollera att filen är en giltig backup."
+    }
+}

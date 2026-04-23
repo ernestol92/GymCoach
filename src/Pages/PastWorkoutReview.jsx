@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { db } from '../db/db'
 import BackButton from '../Components/BackButton'
+import { useTranslation } from 'react-i18next'
 
 const WorkoutHistory = () => {
   const [history, setHistory] = useState([])
-
+  const { t } = useTranslation();
   useEffect(() => {
     const fetchLatestWorkouts = async () => {
       const allRows = await db.history.toArray()
@@ -94,13 +95,13 @@ const WorkoutHistory = () => {
       <div className="history-card-wrapper">
         <BackButton className="justify-self-left"/>
         <div className="history-header">
-          <h2 className="history-title">Recent workouts</h2>
-          <p className="history-subtitle">Latest 3 workout sessions</p>
+          <h2 className="history-title">{t('workoutReview.title')}</h2>
+          <p className="history-subtitle">{t('workoutReview.3latest')}</p>
         </div>
 
         {groupedHistory.length === 0 ? (
           <div className="exercise-history-card empty-card">
-            <p>No workout history found yet.</p>
+            <p>{t('workoutReview.noData')}</p>
           </div>
         ) : (
           groupedHistory.map(([date, rows]) => (
@@ -108,16 +109,16 @@ const WorkoutHistory = () => {
               <div className="card-top">
                 <div>
                   <h3>{formatDate(date)}</h3>
-                  <p className="session-subtext">{rows.length} entries</p>
+                  <p className="session-subtext">{rows.length} {t('workoutReview.entries')}</p>
                 </div>
               </div>
 
               <div className="set-table">
                 <div className="set-table-head workout-head">
-                  <span>Exercise</span>
-                  <span>Set</span>
-                  <span>Reps / Time</span>
-                  <span>Weight / Distance</span>
+                  <span>{t('workoutReview.exercise')}</span>
+                  <span>{t('keywords.set')}</span>
+                  <span>{t('workoutReview.totalRepTime')}</span>
+                  <span>{t('workoutReview.totalWeightDistance')}</span>
                 </div>
 
                 {rows.map((row) => (

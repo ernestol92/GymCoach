@@ -2,8 +2,10 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { db } from '../db/db'
 import BackButton from './BackButton'
+import { useTranslation } from 'react-i18next'
 
 const ExtendedExerciseHistory = () => {
+  const { t } = useTranslation();
   const { exercise } = useParams()
 
   const [exerciseRow, setExerciseRow] = useState(null)
@@ -85,17 +87,17 @@ const ExtendedExerciseHistory = () => {
               <div className="exercise-history-card" key={date}>
                 <div className="card-top">
                   <h3>{date}</h3>
-                  <span className="session-badge">{totalSets} sets</span>
+                  <span className="session-badge">{totalSets} {t('keywords.sets')}</span>
                 </div>
 
                 <div className="history-summary-grid">
                   <div className="summary-box">
-                    <span className="summary-label">Best weight</span>
+                    <span className="summary-label">{t('extendedHistory.bestWeight')}</span>
                     <span className="summary-value">{bestWeight || '-'} kg</span>
                   </div>
 
                   <div className="summary-box">
-                    <span className="summary-label">Total reps</span>
+                    <span className="summary-label">{t('extendedHistory.totalReps')}</span>
                     <span className="summary-value">{totalReps || '-'}</span>
                   </div>
 

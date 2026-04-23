@@ -1,0 +1,125 @@
+{
+  "welcome": {
+    "title": "Hora de",
+    "title2": "treinar?",
+    "description": "Seu parceiro de treino"
+  },
+
+  "start": {
+    "report": "Registrar",
+    "reportDesc": "Registre o exercício que você está fazendo agora",
+
+    "addExercise": "Adicionar exercício",
+    "addExerciseDesc": "Adicione um novo exercício ao seu catálogo",
+
+    "timer": "Timer",
+    "timerDesc": "Defina um timer para seu treino",
+
+    "history": "Histórico",
+    "historyDesc": "Veja seu histórico de treinos",
+
+    "export": "Exportar dados",
+    "exportDesc": "Exporte seus dados de treino para o seu dispositivo"
+  },
+
+  "keywords": {
+    "exercise": "Exercício",
+    "reps": "Repetições",
+    "set": "Série",
+    "sets": "Séries",
+    "weight": "Peso",
+    "duration": "Duração",
+    "upperbody": "Parte superior",
+    "lowerbody": "Parte inferior",
+    "cardio": "Cardio",
+
+    "report": "Registrar",
+    "history": "Histórico",
+
+    "chest": "Peito",
+    "back": "Costas",
+    "shoulders": "Ombros",
+    "arms": "Braços",
+    "core": "Core",
+
+    "quads": "Quadríceps",
+    "hamstrings": "Posterior de coxa",
+    "calves": "Panturrilhas",
+    "glutes": "Glúteos"
+    },
+
+  "group": {
+    "reportTitle": "Registre seus exercícios de {{group}}",
+    "historyTitle": "Histórico de exercícios de {{group}}",
+    "notFound": "Nenhum exercício encontrado para este grupo muscular"
+    },
+
+  "lastTime": {
+    "title": "Última vez",
+    "never": "Nunca",
+    "noData": "Sem dados"
+    },
+
+  "reportexercise": {
+    "addSet": "+ Série",
+    "save": "Salvar",
+    "setsReported": "séries registradas"
+  },
+
+  "createExerciseBtn": "Criar exercício",
+
+  "reportCardio": {
+    "interval": "Intervalo",
+    "distance": "Distância (km)",
+    "duration": "Duração (minutos)",
+    "intervalReported": "Intervalos registrados"
+  },
+
+  "addExercise": "Adicionar exercício",
+  "selectCategory": "Selecione a categoria",
+  "selectMuscle": "Selecione o músculo",
+  "exerciseName": "Nome do exercício",
+  "add": "Adicionar",
+  "saving": "Salvando...",
+  "saved": "Salvo ✓",
+
+  "timer": {
+    "start": "Iniciar",
+    "pause": "Pausar",
+    "reset": "Resetar"
+  },
+
+  "historyToSee": {
+    "exerciseHistory": "Histórico de exercícios",
+    "workoutHistory": "Histórico de treinos"
+  },
+
+  "extendedHistory": {
+    "bestWeight": "Melhor peso",
+    "totalReps": "Repetições totais"
+  },
+
+  "workoutReview": {
+    "title": "Resumo dos treinos",
+    "3latest": "Seus 3 últimos treinos",
+    "entries": "Entradas",
+    "exercise": "Exercício",
+    "totalRepTime": "Repetições / Tempo",
+    "totalWeightDistance": "Peso / Distância",
+    "noData": "Nenhum dado de treino encontrado"
+    },
+
+  "backupData": {
+    "title": "Backup",
+    "description": "Exporte seus dados locais de treino para um arquivo ou importe um backup anterior.",
+    "export": "Exportar",
+    "exporting": "Exportando...",
+    "import": "Importar",
+    "importing": "Importando...",
+    "warning": "A importação substituirá seus dados locais atuais.",
+    "exportSuccess": "Exportação concluída com sucesso.",
+    "exportFailed": "Algo deu errado ao exportar seus dados.",
+    "importSuccess": "Importação concluída com sucesso.",
+    "importFailed": "A importação falhou. Verifique se o arquivo é um backup válido."
+    }
+}

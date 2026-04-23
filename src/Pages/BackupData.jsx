@@ -1,12 +1,14 @@
 import React, { useRef, useState } from 'react'
 import { db } from '../db/db'
 import BackButton from '../Components/BackButton'
+import { useTranslation } from 'react-i18next'
 
 const BackupData = () => {
   const fileInputRef = useRef(null)
   const [isExporting, setIsExporting] = useState(false)
   const [isImporting, setIsImporting] = useState(false)
   const [message, setMessage] = useState('')
+  const { t } = useTranslation()
 
   const handleExport = async () => {
     try {
@@ -109,11 +111,11 @@ const BackupData = () => {
 
   return (
     <div className="backup-page">
-      <BackButton/>
+      <BackButton />
       <div className="backup-card">
-        <h1 className="backup-title">Backup</h1>
+        <h1 className="backup-title">{t('backupData.title')}</h1>
         <p className="backup-text">
-          Export your local workout data to a file or import a previous backup.
+          {t('backupData.description')}
         </p>
 
         <div className="backup-actions">
@@ -122,7 +124,7 @@ const BackupData = () => {
             onClick={handleExport}
             disabled={isExporting || isImporting}
           >
-            {isExporting ? 'Exporting...' : 'Export'}
+            {isExporting ? t('backupData.exporting') : t('backupData.export')}
           </button>
 
           <button
@@ -130,7 +132,7 @@ const BackupData = () => {
             onClick={handleImportClick}
             disabled={isExporting || isImporting}
           >
-            {isImporting ? 'Importing...' : 'Import'}
+            {isImporting ? t('backupData.importing') : t('backupData.import')}
           </button>
         </div>
 
@@ -143,7 +145,7 @@ const BackupData = () => {
         />
 
         <p className="backup-warning">
-          Import will replace your current local data.
+          {t('backupData.warning')}
         </p>
 
         {message && <p className="backup-message">{message}</p>}

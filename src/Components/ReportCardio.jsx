@@ -3,9 +3,11 @@ import { Link, useParams } from 'react-router-dom'
 import { useState } from 'react';
 import { db } from '../db/db';
 import BackButton from '../Components/BackButton';
+import { useTranslation } from 'react-i18next'
 
 const ReportCardio = () => {
     const { exercise } = useParams();
+    const { t } = useTranslation();
 
         const [distance, setDistance] = useState(0)
         const [duration, setDuration] = useState(0)
@@ -78,9 +80,9 @@ const ReportCardio = () => {
                 
                 <div className='reportSet'>
                     <div className='set mb3'>
-                        <h3>Interval</h3>
+                        <h3>{t('reportCardio.interval')}</h3>
                     </div>
-                    <p>Distance:</p>
+                    <p>{t('reportCardio.distance')}:</p>
                     <input
                         className='slider'
                         type="range"
@@ -105,7 +107,7 @@ const ReportCardio = () => {
                     </div>
                     <span className='mb3'>km</span>
                     {/* ////////////////////////////////////Weight///////////////////////////////////  */}
-                    <p>Duration:</p>
+                    <p>{t('reportCardio.duration')}:</p>
                     <input
                         className='slider'
                         type="range"
@@ -128,12 +130,12 @@ const ReportCardio = () => {
                         <button className='subAddBtn' onClick={handleIncreaseDuration}>+</button>
                     </div>
                     <span className='mb3'>min</span>
-                    <p> Intervals reported</p>
-                    {intervals.map((interval, index) => <span className='reportedSets' key={index}>Interval {index + 1}: {interval.distance} km, {interval.duration} min</span>)}
+                    <p> {t('reportCardio.intervalReported')}:</p>
+                    {intervals.map((interval, index) => <span className='reportedSets' key={index}> {t('reportCardio.interval')} {index + 1}: {interval.distance} km, {interval.duration} min</span>)}
                 </div>
                 <div className='reportWrapper'>
-                    <button className='addSet-btn' onClick={handleAddInterval}>+ Interval</button>
-                    <Link to='/' className='add-btn' onClick={handleSaveReport}>Save</Link>
+                    <button className='addSet-btn' onClick={handleAddInterval}>+ {t('reportCardio.interval')}</button>
+                    <Link to='/' className='add-btn' onClick={handleSaveReport}>{t('reportexercise.save')}</Link>
                 </div>
                 
 

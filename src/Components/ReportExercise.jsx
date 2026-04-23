@@ -4,9 +4,9 @@ import { Link, useParams } from 'react-router-dom'
 import { db } from '../db/db';
 import LastTime from './LastTime';
 import BackButton from '../Components/BackButton';
-
+import { useTranslation } from 'react-i18next'
 const ReportExercise = () => {
-
+    const { t } = useTranslation();
     const { exercise } = useParams();
     const [reps, setReps] = useState(0)
     const [weight, setWeight] = useState(0)
@@ -97,9 +97,9 @@ const ReportExercise = () => {
                 <LastTime exercise_id={exercise_id} />
                 <div className='reportSet'>
                     <div className='set mb '>
-                        <h3>Set {sets.length + 1}</h3>
+                        <h3> {t("keywords.set")} {sets.length + 1}</h3>
                     </div>
-                    <p>Reps:</p>
+                    <p>{t("keywords.reps")}:</p>
                     <input
                         className='slider'
                         type="range"
@@ -122,7 +122,7 @@ const ReportExercise = () => {
                         <button onClick={handleIncreaseReps} className='subAddBtn'>+</button>
                     </div>
                     {/* ////////////////////////////////////Weight///////////////////////////////////  */}
-                    <p>Weight:</p>
+                    <p>{t("keywords.weight")}:</p>
                     <input
                         className='slider'
                         type="range"
@@ -146,12 +146,12 @@ const ReportExercise = () => {
                         <button onClick={handleIncreaseWeight} className='subAddBtn'>+</button>
                     </div>
                     <span className='mb3'>kg</span>
-                    <p>{sets.length} Sets reported</p>
-                    {sets.map((set, index) => <span className='reportedSets' key={index}>Set {index + 1}: {set.reps} reps, {set.weight}kg</span>)}
+                    <p>{sets.length} {t("reportexercise.setsReported")}</p>
+                    {sets.map((set, index) => <span className='reportedSets' key={index}>{t("keywords.set")} {index + 1}: {set.reps} {t("keywords.reps")}, {set.weight}kg</span>)}
                 </div>
                 <div className='reportWrapper'>
-                    <button onClick={handleAddSet} className='addSet-btn'>+Set</button>
-                    <Link to='/' onClick={handleSaveReport} className='add-btn'>Save</Link>
+                    <button onClick={handleAddSet} className='addSet-btn'>{t("reportexercise.addSet")}</button>
+                    <Link to='/' onClick={handleSaveReport} className='add-btn'>{t("reportexercise.save")}</Link>
                 </div>
                 
 

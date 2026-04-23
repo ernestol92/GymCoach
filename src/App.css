@@ -8,6 +8,11 @@
   color: white;
   font-family: "Manrope";
   font-weight: 500;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 
 /* typography color scheme*/
@@ -44,10 +49,10 @@
   overflow: hidden;
 }
 .content {
-  flex: 1;              /* takes remaining space */
+  flex: 1;
   overflow-y: auto;
   width: 100%;
-  min-height: 0;     /* THIS enables scrolling */
+  min-height: 0;
 }
 
 .header{
@@ -64,12 +69,32 @@
   gap: 2rem;
 }
 
+.language-btn{
+  background-color: transparent;
+  border: none;
+}
+
 .logo{
   font-family: "Orbitron", sans-serif;
   color: #c1ff00;
   font-size: 1.5rem;
   text-decoration: none;
 }
+
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button{
+    padding: 1.5rem;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-family: "Orbitron", sans-serif;
+  }
+}
+
 
 .breadCrumb{
   display: flex;
@@ -154,8 +179,9 @@
   text-decoration: none;
   border-radius: 1rem;
   height: 200px;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 900;
+  text-align: center;
 }
 .start-card{
   height: 250px;
@@ -247,6 +273,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
   height: 80px;
 }
 
@@ -588,6 +615,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  gap: 1rem;
 }
 
 .history-title {
@@ -818,7 +846,6 @@
 }
 
 .backup-page {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -903,3 +930,4 @@
 .justify-self-left{
   justify-self: left;
 }
+
