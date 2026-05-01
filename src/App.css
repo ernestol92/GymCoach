@@ -583,19 +583,19 @@
   background-color: transparent;
 }
 
-.footer-link:hover{
+.footer-link.active{
   background-color: #1C1B1B;
   border-radius: 0.5rem;
   transition: .5s;
   transform: scale(1.1);
 }
 
-.footer-link:hover svg {
+.footer-link.active svg {
   fill: #c1ff00;
   transition: .5s;
 }
 
-.footer-link:hover span {
+.footer-link.active span {
   color: #c1ff00;
   transition: .5s;
 }
@@ -831,20 +831,6 @@
   background: #1a1a1a;
 }
 
-@media (max-width: 640px) {
-
-  .set-table-head,
-  .set-table-row {
-    grid-template-columns: 1.5fr 0.7fr 1fr 1fr;
-  }
-
-  .set-table-head span,
-  .set-table-row span {
-    padding: 0.75rem 0.55rem;
-    font-size: 0.95rem;
-  }
-}
-
 .backup-page {
   display: flex;
   flex-direction: column;
@@ -931,3 +917,16 @@
   justify-self: left;
 }
 
+@media (max-width: 640px) {
+
+  .set-table-head,
+  .set-table-row {
+    grid-template-columns: 1.5fr 0.7fr 1fr 1fr;
+  }
+
+  .set-table-head span,
+  .set-table-row span {
+    padding: 0.75rem 0.55rem;
+    font-size: 0.95rem;
+  }
+}
