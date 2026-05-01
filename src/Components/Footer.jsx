@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { ChartBarSquareIcon, PlusCircleIcon, ClockIcon, ArrowPathRoundedSquareIcon, ArrowUpOnSquareIcon, HomeIcon } from '@heroicons/react/24/solid';
 
 const Footer = () => {
   return (
     <footer className='footer'>
-          <Link to="/" className='footer-link'><HomeIcon className='icon-md footer-icon'/><span>HOME</span></Link>
-          <Link to="/reportCategory" className='footer-link'><ChartBarSquareIcon className='icon-md footer-icon'/><span>REPORT</span></Link>
-          <Link to="/addExercise" className='footer-link'><PlusCircleIcon className='icon-md footer-icon'/><span>ADD</span></Link>
-          <Link to="/history" className='footer-link'><ArrowPathRoundedSquareIcon className='icon-md footer-icon'/><span>HISTORY</span></Link>
-          <Link to="/timer" className='footer-link'><ClockIcon className='icon-md footer-icon'/><span>TIMER</span></Link>
+          <NavLink to="/" className='footer-link'><HomeIcon className='icon-md footer-icon'/><span>HOME</span></NavLink>
+          <NavLink to="/reportCategory" className='footer-link'><ChartBarSquareIcon className='icon-md footer-icon'/><span>REPORT</span></NavLink>
+          <NavLink to="/addExercise" className='footer-link'><PlusCircleIcon className='icon-md footer-icon'/><span>ADD</span></NavLink>
+          <NavLink to="/history" className='footer-link'><ArrowPathRoundedSquareIcon className='icon-md footer-icon'/><span>HISTORY</span></NavLink>
+          <NavLink to="/timer" className='footer-link'><ClockIcon className='icon-md footer-icon'/><span>TIMER</span></NavLink>
     </footer>
   )
 }
