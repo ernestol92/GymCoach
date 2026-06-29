@@ -1,0 +1,55 @@
+{
+  "chest": "Chest",
+  "bench_press": "Bench Press",
+  "incline_dumbbell_press": "Incline Dumbbell Press",
+  "push_ups": "Push-ups",
+  "chest_fly": "Chest Fly",
+
+  "back": "Back",
+  "pull_ups": "Pull-ups",
+  "lat_pulldown": "Lat Pulldown",
+  "barbell_row": "Barbell Row",
+  "seated_cable_row": "Seated Cable Row",
+
+  "shoulders": "Shoulders",
+  "shoulder_press": "Shoulder Press",
+  "lateral_raise": "Lateral Raise",
+  "front_raise": "Front Raise",
+  "face_pull": "Face Pull",
+
+  "arms": "Arms",
+  "bicep_curl": "Bicep Curl",
+  "hammer_curl": "Hammer Curl",
+  "tricep_pushdown": "Tricep Pushdown",
+  "skull_crushers": "Skull Crushers",
+
+  "core": "Core",
+  "plank": "Plank",
+  "crunches": "Crunches",
+  "leg_raises": "Leg Raises",
+  "russian_twists": "Russian Twists",
+
+  "quads": "Quads",
+  "barbell_squat": "Barbell Squat",
+  "leg_press": "Leg Press",
+  "leg_extension": "Leg Extension",
+  "walking_lunges": "Walking Lunges",
+
+  "hamstrings": "Hamstrings",
+  "romanian_deadlift": "Romanian Deadlift",
+  "lying_leg_curl": "Lying Leg Curl",
+  "good_mornings": "Good Mornings",
+  "glute_ham_raise": "Glute-Ham Raise",
+
+  "glutes": "Glutes",
+  "hip_thrust": "Hip Thrust",
+  "glute_bridge": "Glute Bridge",
+  "bulgarian_split_squat": "Bulgarian Split Squat",
+  "cable_kickback": "Cable Kickback",
+
+  "calves": "Calves",
+  "standing_calf_raise": "Standing Calf Raise",
+  "seated_calf_raise": "Seated Calf Raise",
+  "single_leg_calf_raise": "Single-leg Calf Raise",
+  "donkey_calf_raise": "Donkey Calf Raise"
+}

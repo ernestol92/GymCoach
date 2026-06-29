@@ -1,0 +1,55 @@
+{
+  "chest": "Bröst",
+  "bench_press": "Bänkpress",
+  "incline_dumbbell_press": "Lutande hantelpress",
+  "push_ups": "Armhävningar",
+  "chest_fly": "Bröstflyes",
+
+  "back": "Rygg",
+  "pull_ups": "Chins",
+  "lat_pulldown": "Latsdrag",
+  "barbell_row": "Skivstångsrodd",
+  "seated_cable_row": "Sittande kabelrodd",
+
+  "shoulders": "Axlar",
+  "shoulder_press": "Axelpress",
+  "lateral_raise": "Sidolyft",
+  "front_raise": "Framålyft",
+  "face_pull": "Face Pull",
+
+  "arms": "Armar",
+  "bicep_curl": "Bicepscurl",
+  "hammer_curl": "Hammercurl",
+  "tricep_pushdown": "Tricepspress",
+  "skull_crushers": "Fransk press",
+
+  "core": "Bål",
+  "plank": "Plankan",
+  "crunches": "Crunches",
+  "leg_raises": "Benlyft",
+  "russian_twists": "Ryska vridningar",
+
+  "quads": "Framsida lår",
+  "barbell_squat": "Knäböj",
+  "leg_press": "Benpress",
+  "leg_extension": "Benspark",
+  "walking_lunges": "Gående utfall",
+
+  "hamstrings": "Baksida lår",
+  "romanian_deadlift": "Rumänska marklyft",
+  "lying_leg_curl": "Liggande lårcurl",
+  "good_mornings": "Good Mornings",
+  "glute_ham_raise": "Glute-Ham Raise",
+
+  "glutes": "Säte",
+  "hip_thrust": "Hip Thrust",
+  "glute_bridge": "Glute Bridge",
+  "bulgarian_split_squat": "Bulgariska utfall",
+  "cable_kickback": "Kabel kickback",
+
+  "calves": "Vader",
+  "standing_calf_raise": "Stående vadpress",
+  "seated_calf_raise": "Sittande vadpress",
+  "single_leg_calf_raise": "Enbens vadpress",
+  "donkey_calf_raise": "Donkey Calf Raise"
+}

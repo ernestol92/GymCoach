@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { db } from "../db/db.js";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import BackButton from '../Components/BackButton';
 import { useTranslation } from 'react-i18next'
 
@@ -159,7 +159,13 @@ const handleAddExercise = async () => {
           </div>
         )}
 
+        <small className='text-center'>OR</small>
 
+        <div className='start-card card-fx text-div mt3'>
+          <h3 className='text-div'>Not sure what exercise to add?</h3>
+          <p className='text-div'>Press the button below to see a generic exercise list which you can add</p>
+          <Link to="genericList" className='exerciseListBtn' >Exercise List </Link>
+        </div>
         
     </div>
   )

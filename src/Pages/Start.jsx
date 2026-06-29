@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
-import { ChartBarSquareIcon, PlusCircleIcon, ClockIcon, ArrowPathRoundedSquareIcon, ArrowUpOnSquareIcon } from '@heroicons/react/24/solid';
+import { ChartBarSquareIcon, PlusCircleIcon, ClockIcon, ArrowPathRoundedSquareIcon, ArrowUpOnSquareIcon, ArrowRightIcon  } from '@heroicons/react/24/solid';
 import { useTranslation } from 'react-i18next'
+import { IconReport, IconClipboardPlus, IconTimeDuration15, IconHistory, IconDatabaseExport } from "@tabler/icons-react";
 
 
 const Start = () => {
@@ -22,43 +23,95 @@ const Start = () => {
             </div>
 
             <Link to="reportCategory" className='start-card card-fx'>
-              <ChartBarSquareIcon className="icon-lg text-div" />
+              <IconReport
+                size={170}
+                stroke={1}
+                className="start-card-bg"
+              />
+              <div className='text-div'>
+                <ChartBarSquareIcon className="text-div icon-xl" />
+              </div>
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.report")}</h2>
                 <span className='text-div'>{t("start.reportDesc")}</span>
               </div>
+              <div className='text-div'>
+                <ArrowRightIcon className="text-div icon-sm" />
+              </div>
             </Link>
 
             <Link to="addExercise" className='start-card card-fx'>
-              <PlusCircleIcon className="icon-lg text-div" />
+              <IconClipboardPlus
+                size={170}
+                stroke={1}
+                className="start-card-bg"
+              />
+              <div className='text-div'>
+                <PlusCircleIcon className="text-div icon-xl" />
+              </div>
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.addExercise")}</h2>
                 <span className='text-div'>{t("start.addExerciseDesc")}</span>
               </div>
+              <div className='text-div'>
+                <ArrowRightIcon className="text-div icon-sm" />
+              </div>
             </Link>
 
             <Link to="timer" className='start-card card-fx'>
-              <ClockIcon className="icon-lg text-div" />
+              <IconTimeDuration15
+                size={170}
+                stroke={1}
+                className="start-card-bg"
+              />
+              <div className='text-div'>
+                <ClockIcon className="text-div icon-xl" />
+                </div>
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.timer")}</h2>
                 <span className='text-div'>{t("start.timerDesc")}</span>
               </div>
+              <div className='text-div'>
+                <ArrowRightIcon className="text-div icon-sm" />
+              </div>
             </Link>
 
             <Link to="history" className='start-card card-fx'>
-              <ArrowPathRoundedSquareIcon className="icon-lg text-div" />
+              <IconHistory
+                size={170}
+                stroke={1}
+                className="start-card-bg"
+              />
+              <div className='text-div'>
+                <ArrowPathRoundedSquareIcon className="text-div icon-xl" />
+              </div>
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.history")}</h2>
                 <span className='text-div'>{t("start.historyDesc")}</span>
               </div>
+              <div className='text-div'>
+                <ArrowRightIcon className="text-div icon-sm" />
+              </div>
             </Link>
 
             <Link to="exportImport" className='start-card card-fx'>
-              <ArrowUpOnSquareIcon className="icon-md text-div" />
+              <IconDatabaseExport
+                size={170}
+                stroke={1}
+                className="start-card-bg"
+              />
+              <div className='text-div'>
+                <ArrowUpOnSquareIcon className="text-div icon-xl" />
+              </div>
+              
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.export")}</h2>
                 <span className='text-div'>{t("start.exportDesc")}</span>
               </div>
+              <div className='text-div'>
+                <ArrowRightIcon className="text-div icon-sm" />
+              </div>
+              
             </Link>
 
              

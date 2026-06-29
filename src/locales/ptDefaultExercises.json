@@ -1,0 +1,55 @@
+{
+  "chest": "Peito",
+  "bench_press": "Supino reto",
+  "incline_dumbbell_press": "Supino inclinado com halteres",
+  "push_ups": "Flexões",
+  "chest_fly": "Crucifixo",
+
+  "back": "Costas",
+  "pull_ups": "Barra fixa",
+  "lat_pulldown": "Puxada frontal",
+  "barbell_row": "Remada com barra",
+  "seated_cable_row": "Remada baixa",
+
+  "shoulders": "Ombros",
+  "shoulder_press": "Desenvolvimento de ombros",
+  "lateral_raise": "Elevação lateral",
+  "front_raise": "Elevação frontal",
+  "face_pull": "Face Pull",
+
+  "arms": "Braços",
+  "bicep_curl": "Rosca direta",
+  "hammer_curl": "Rosca martelo",
+  "tricep_pushdown": "Tríceps na polia",
+  "skull_crushers": "Tríceps francês",
+
+  "core": "Core",
+  "plank": "Prancha",
+  "crunches": "Abdominais",
+  "leg_raises": "Elevação de pernas",
+  "russian_twists": "Torção russa",
+
+  "quads": "Quadríceps",
+  "barbell_squat": "Agachamento com barra",
+  "leg_press": "Leg Press",
+  "leg_extension": "Cadeira extensora",
+  "walking_lunges": "Afundo caminhando",
+
+  "hamstrings": "Posterior de coxa",
+  "romanian_deadlift": "Levantamento terra romeno",
+  "lying_leg_curl": "Mesa flexora",
+  "good_mornings": "Good Morning",
+  "glute_ham_raise": "Glute-Ham Raise",
+
+  "glutes": "Glúteos",
+  "hip_thrust": "Elevação de quadril",
+  "glute_bridge": "Ponte de glúteos",
+  "bulgarian_split_squat": "Agachamento búlgaro",
+  "cable_kickback": "Coice na polia",
+
+  "calves": "Panturrilhas",
+  "standing_calf_raise": "Panturrilha em pé",
+  "seated_calf_raise": "Panturrilha sentada",
+  "single_leg_calf_raise": "Panturrilha unilateral",
+  "donkey_calf_raise": "Panturrilha burro"
+}

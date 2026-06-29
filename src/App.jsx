@@ -18,6 +18,7 @@ import ExtendedExerciseHistory from './Components/ExtendedExerciseHistory';
 import Cardio from './Pages/Cardio';
 import PastWorkoutReview from './Pages/PastWorkoutReview';
 import BackupData from './Pages/BackupData';
+import GenericExercises from './Pages/GenericExercises';
 
 
 const App = () => {
@@ -41,7 +42,8 @@ const App = () => {
         <Route path='/reportCategory/LowerBody/:group/:exercise' element={<ReportExercise/>}></Route>
         <Route path='/reportCategory/:group/:exercise' element={<ReportCardio/>}></Route>
         
-        <Route path='/addExercise'element={<AddExercise />}></Route>
+        <Route path='/addExercise' element={<AddExercise />}></Route>
+        <Route path='/addExercise/genericList' element={<GenericExercises/>}></Route>
         
         <Route path='/timer'element={<Timer />}></Route>
 

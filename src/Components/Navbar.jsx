@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [selected, setSelected] = useState(false)
 
+
   const handleClick = () => {
     setIsOpen((prev) => !prev)
   }

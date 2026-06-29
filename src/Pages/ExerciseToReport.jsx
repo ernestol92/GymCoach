@@ -25,11 +25,16 @@ const ExerciseToReport = ({ mode }) => {
 
         //Get exercises
         const exercises = await db.exercises.bulkGet(exerciseIds);
+        
         const filteredExercises = exercises.filter(x => x !== undefined);
-        console.log(filteredExercises);
 
-        const exerciseNames = filteredExercises.map(x => x.exercise);
-        setExercises(exerciseNames);
+        setExercises(filteredExercises);
+
+        // const filteredExercises = exercises.filter(x => x !== undefined);
+        // console.log(filteredExercises);
+
+        // const exerciseNames = filteredExercises.map(x => x.exerciseKey ? t(`exercises.${x.exerciseKey}`) : x.exercise);
+        // setExercises(exerciseNames);
         }
 
         fetchExercises();
@@ -54,10 +59,17 @@ const ExerciseToReport = ({ mode }) => {
                     <CreateExerciseLinkBtn/>
                 </> 
                 }
-                {exercises.map((exercise) => (
-                <Link key={exercise} to={`${exercise}`} className='exerciseListBtn'>{exercise}</Link>
-                
-                ))}
+                {exercises.map((exercise) => {
+                    const displayName = exercise.exerciseKey 
+                        ? t(`exercises.${exercise.exerciseKey}`)
+                        : exercise.exercise;
+                    
+                    const routeValue = exercise.exerciseKey || exercise.exercise;
+
+                    return (
+                        <Link key={exercise.id} to={`${routeValue}`} className='exerciseListBtn'>{displayName}</Link>
+                    );
+                })}
             </div>
 
         </div>

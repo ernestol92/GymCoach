@@ -3,7 +3,7 @@ import Dexie from "dexie";
 export const db = new Dexie("gymApp")
 //kom ih[g att ändra versionen]
 db.version(5).stores({
-    exercises: "++id, &exercise, type",
+    exercises: "++id, &exerciseKey, type, isCustom",
     muscles: "++id, &muscle, muscleRegion",
     exerciseMuscles: "++id, exercise_id, muscle_id",
     history: "++id, session_id, exercise_id, date, sets, reps, weight, duration, distance, [exercise_id+date]"

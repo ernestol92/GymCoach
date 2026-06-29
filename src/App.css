@@ -184,18 +184,22 @@
   text-align: center;
 }
 .start-card{
-  height: 250px;
+  height: auto;
+  min-height: 180px;
+  max-height: 300px;
   width: 100%;
   padding: 2rem;
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
   justify-content: space-between;
   align-items: start;
   background-color: #1C1B1B;
-  background: linear-gradient(to bottom left, #151F00, #1C1B1B 50%);
+  background: linear-gradient(to bottom right, #35470f, #1C1B1B 30%);
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
 
 
   svg{
@@ -211,6 +215,17 @@
 
 .start-card span{
   color: #ADABAA;
+}
+
+.start-card-bg{
+  position: absolute;
+  background-color: transparent;
+  stroke-width: .5px;
+  right: -20px;
+  bottom: -20px;
+  opacity: 0.05;
+  fill: transparent !important;
+  stroke: #548317 !important;
 }
 
 .center-card{
@@ -555,6 +570,11 @@
 .icon-lg {
   width: 3rem;
   height: 3rem;
+}
+
+.icon-xl {
+  width: 4rem;
+  height: 4rem;
 }
 
 .footer-icon{
@@ -931,3 +951,7 @@
   justify-self: left;
 }
 
+.text-center{
+  display: block;
+  text-align: center;
+}

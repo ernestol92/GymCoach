@@ -1,0 +1,55 @@
+{
+  "chest": "Pecho",
+  "bench_press": "Press de banca",
+  "incline_dumbbell_press": "Press inclinado con mancuernas",
+  "push_ups": "Flexiones",
+  "chest_fly": "Aperturas de pecho",
+
+  "back": "Espalda",
+  "pull_ups": "Dominadas",
+  "lat_pulldown": "Jalón al pecho",
+  "barbell_row": "Remo con barra",
+  "seated_cable_row": "Remo sentado en polea",
+
+  "shoulders": "Hombros",
+  "shoulder_press": "Press de hombros",
+  "lateral_raise": "Elevaciones laterales",
+  "front_raise": "Elevaciones frontales",
+  "face_pull": "Face Pull",
+
+  "arms": "Brazos",
+  "bicep_curl": "Curl de bíceps",
+  "hammer_curl": "Curl martillo",
+  "tricep_pushdown": "Extensión de tríceps en polea",
+  "skull_crushers": "Press francés",
+
+  "core": "Core",
+  "plank": "Plancha",
+  "crunches": "Abdominales",
+  "leg_raises": "Elevaciones de piernas",
+  "russian_twists": "Giros rusos",
+
+  "quads": "Cuádriceps",
+  "barbell_squat": "Sentadilla con barra",
+  "leg_press": "Prensa de piernas",
+  "leg_extension": "Extensión de piernas",
+  "walking_lunges": "Zancadas caminando",
+
+  "hamstrings": "Isquiotibiales",
+  "romanian_deadlift": "Peso muerto rumano",
+  "lying_leg_curl": "Curl femoral tumbado",
+  "good_mornings": "Good Mornings",
+  "glute_ham_raise": "Elevación glúteo-isquiotibial",
+
+  "glutes": "Glúteos",
+  "hip_thrust": "Hip Thrust",
+  "glute_bridge": "Puente de glúteos",
+  "bulgarian_split_squat": "Sentadilla búlgara",
+  "cable_kickback": "Patada de glúteo en polea",
+
+  "calves": "Pantorrillas",
+  "standing_calf_raise": "Elevación de gemelos de pie",
+  "seated_calf_raise": "Elevación de gemelos sentado",
+  "single_leg_calf_raise": "Elevación de gemelo a una pierna",
+  "donkey_calf_raise": "Elevación de gemelos tipo burro"
+}

@@ -1,0 +1,55 @@
+[
+  { "muscleKey": "chest"},
+  { "exerciseKey": "bench_press", "type": "strength", "muscle": "chest" },
+  { "exerciseKey": "incline_dumbbell_press", "type": "strength", "muscle": "chest" },
+  { "exerciseKey": "push_ups", "type": "strength", "muscle": "chest" },
+  { "exerciseKey": "chest_fly", "type": "strength", "muscle": "chest" },
+
+  { "muscleKey": "back"},
+  { "exerciseKey": "pull_ups", "type": "strength", "muscle": "back" },
+  { "exerciseKey": "lat_pulldown", "type": "strength", "muscle": "back" },
+  { "exerciseKey": "barbell_row", "type": "strength", "muscle": "back" },
+  { "exerciseKey": "seated_cable_row", "type": "strength", "muscle": "back" },
+
+  { "muscleKey": "shoulders"},
+  { "exerciseKey": "shoulder_press", "type": "strength", "muscle": "shoulders" },
+  { "exerciseKey": "lateral_raise", "type": "strength", "muscle": "shoulders" },
+  { "exerciseKey": "front_raise", "type": "strength", "muscle": "shoulders" },
+  { "exerciseKey": "face_pull", "type": "strength", "muscle": "shoulders" },
+
+  { "muscleKey": "arms"},
+  { "exerciseKey": "bicep_curl", "type": "strength", "muscle": "arms" },
+  { "exerciseKey": "hammer_curl", "type": "strength", "muscle": "arms" },
+  { "exerciseKey": "tricep_pushdown", "type": "strength", "muscle": "arms" },
+  { "exerciseKey": "skull_crushers", "type": "strength", "muscle": "arms" },
+
+  { "muscleKey": "core"},
+  { "exerciseKey": "plank", "type": "strength", "muscle": "core" },
+  { "exerciseKey": "crunches", "type": "strength", "muscle": "core" },
+  { "exerciseKey": "leg_raises", "type": "strength", "muscle": "core" },
+  { "exerciseKey": "russian_twists", "type": "strength", "muscle": "core" },
+
+  { "muscleKey": "quads"},
+  { "exerciseKey": "barbell_squat", "type": "strength", "muscle": "quads" },
+  { "exerciseKey": "leg_press", "type": "strength", "muscle": "quads" },
+  { "exerciseKey": "leg_extension", "type": "strength", "muscle": "quads" },
+  { "exerciseKey": "walking_lunges", "type": "strength", "muscle": "quads" },
+
+  { "muscleKey": "hamstrings"},
+  { "exerciseKey": "romanian_deadlift", "type": "strength", "muscle": "hamstrings" },
+  { "exerciseKey": "lying_leg_curl", "type": "strength", "muscle": "hamstrings" },
+  { "exerciseKey": "good_mornings", "type": "strength", "muscle": "hamstrings" },
+  { "exerciseKey": "glute_ham_raise", "type": "strength", "muscle": "hamstrings" },
+
+  { "muscleKey": "glutes"},
+  { "exerciseKey": "hip_thrust", "type": "strength", "muscle": "glutes" },
+  { "exerciseKey": "glute_bridge", "type": "strength", "muscle": "glutes" },
+  { "exerciseKey": "bulgarian_split_squat", "type": "strength", "muscle": "glutes" },
+  { "exerciseKey": "cable_kickback", "type": "strength", "muscle": "glutes" },
+
+  { "muscleKey": "calves"},
+  { "exerciseKey": "standing_calf_raise", "type": "strength", "muscle": "calves" },
+  { "exerciseKey": "seated_calf_raise", "type": "strength", "muscle": "calves" },
+  { "exerciseKey": "single_leg_calf_raise", "type": "strength", "muscle": "calves" },
+  { "exerciseKey": "donkey_calf_raise", "type": "strength", "muscle": "calves" }
+]
