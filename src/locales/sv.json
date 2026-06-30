@@ -15,6 +15,9 @@
     "timer": "Timer",
     "timerDesc": "Sätt en timer för din träning",
 
+    "library": "Övningar",
+    "libraryDesc": "Hantera alla dina sparade övningar",
+
     "history": "Historik",
     "historyDesc": "Se din träningshistorik",
 

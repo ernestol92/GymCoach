@@ -16,6 +16,9 @@
     "timer": "Timer",
     "timerDesc": "Set a timer for your exercise",
 
+    "library": "Library",
+    "libraryDesc": "Handle all your existing exercises",
+
     "history": "History",
     "historyDesc": "View your workout history",
 

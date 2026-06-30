@@ -98,7 +98,7 @@ const ReportExercise = () => {
 
             <div className='exerciseList transparent'>
                 <LastTime exercise_id={exercise_id} />
-                <div className='reportSet'>
+                <div className='reportSet glass-dark'>
                     <div className='set mb '>
                         <h3> {t("keywords.set")} {sets.length + 1}</h3>
                     </div>

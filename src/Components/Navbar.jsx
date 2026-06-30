@@ -45,11 +45,11 @@ const Navbar = () => {
 
 
               <div className='Navbar-icons'>
-                <Link to="/">
+                {/* <Link to="/">
                   <HomeIcon className='icon-md primary-color'></HomeIcon>
-                </Link>
+                </Link> */}
                 <button to="/inspiration" onClick={handleClick} className='language-btn'>
-                  <LanguageIcon className='icon-md primary-color'></LanguageIcon>
+                  <LanguageIcon className='icon-sm primary-color'></LanguageIcon>
                 </button>
               
               </div>
@@ -58,10 +58,10 @@ const Navbar = () => {
 
       <div>
         {isOpen && (
-          <div className='dropdown'>
-            <button onClick={() => handleLanguageChange('en')}>English</button>
+          <div className='dropdown language-select-wrapper'>
+            <button className='language-select' onClick={() => handleLanguageChange('en')}>English</button>
             <button onClick={() => handleLanguageChange('sv')}>Svenska</button>
-            <button onClick={() => handleLanguageChange('es')}>Español</button>
+            <button className='language-select' onClick={() => handleLanguageChange('es')}>Español</button>
             <button onClick={() => handleLanguageChange('pt')}>Português</button>
           </div>
         )}

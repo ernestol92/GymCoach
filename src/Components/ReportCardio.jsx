@@ -78,7 +78,7 @@ const ReportCardio = () => {
             <div className='exerciseList transparent'>
                 
                 
-                <div className='reportSet'>
+                <div className='reportSet glass-dark'>
                     <div className='set mb3'>
                         <h3>{t('reportCardio.interval')}</h3>
                     </div>

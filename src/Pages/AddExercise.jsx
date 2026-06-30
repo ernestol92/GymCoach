@@ -23,11 +23,6 @@ const muscles = {
   lower: ['quads', 'hamstrings', 'glutes', 'calves']
 }
 
-// const muscles = {
-//   upper: [t('keywords.chest'), t('keywords.back'), t('keywords.shoulders'), t('keywords.arms'), t('keywords.core')],
-//   lower: [t('keywords.quads'), t('keywords.hamstrings'), t('keywords.glutes'), t('keywords.calves')]
-// }
-
 const handleAddExercise = async () => {
 
   if (!exerciseName || isSaving) return;
@@ -159,6 +154,8 @@ const handleAddExercise = async () => {
           </div>
         )}
 
+        <small className='text-center transparent'>OR</small>
+        
         <small className='text-center transparent'>OR</small>
 
         <div className='start-card card-fx text-div mt3'>

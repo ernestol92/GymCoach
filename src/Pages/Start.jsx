@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
-import { ChartBarSquareIcon, PlusCircleIcon, ClockIcon, ArrowPathRoundedSquareIcon, ArrowUpOnSquareIcon, ArrowRightIcon  } from '@heroicons/react/24/solid';
+import { ChartBarSquareIcon, PlusCircleIcon, ClockIcon, RectangleStackIcon, ArrowPathRoundedSquareIcon, ArrowUpOnSquareIcon, ArrowRightIcon  } from '@heroicons/react/24/solid';
 import { useTranslation } from 'react-i18next'
-import { IconReport, IconClipboardPlus, IconTimeDuration15, IconHistory, IconDatabaseExport } from "@tabler/icons-react";
+import { IconReport, IconClipboardPlus, IconTimeDuration15, IconHistory, IconDatabaseExport, IconCashEdit } from "@tabler/icons-react";
 
 
 const Start = () => {
@@ -12,7 +12,7 @@ const Start = () => {
     <div className='container'>
       <div className='start-page-column start-bg'>
 
-            <div className='banner'>
+            <div className='banner mt'>
               <h1 className='start-title text-div transparent'>{t("welcome.title")}<span className='orbitron-font white-color transparent'>{t("welcome.title2")}</span></h1>
               <p className='start-subtitle transparent'>{t("welcome.description")}</p>
               {/* Ready to level up today?
@@ -70,6 +70,24 @@ const Start = () => {
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.timer")}</h2>
                 <span className='text-div'>{t("start.timerDesc")}</span>
+              </div>
+              <div className='text-div'>
+                <ArrowRightIcon className="text-div icon-sm" />
+              </div>
+            </Link>
+
+            <Link to="#" className='start-card card-fx'>
+              <IconCashEdit
+                size={170}
+                stroke={1}
+                className="start-card-bg"
+              />
+              <div className='text-div'>
+                <RectangleStackIcon className="text-div icon-xl" />
+                </div>
+              <div className='text-div'>
+                <h2 className='text-div'>{t("start.library")}</h2>
+                <span className='text-div'>{t("start.libraryDesc")}</span>
               </div>
               <div className='text-div'>
                 <ArrowRightIcon className="text-div icon-sm" />

@@ -15,6 +15,9 @@
     "timer": "Temporizador",
     "timerDesc": "Configura un temporizador para tu entrenamiento",
 
+    "library": "Ejercicios",
+    "libraryDesc": "Administra todos tus ejercicios",
+
     "history": "Historial",
     "historyDesc": "Consulta tu historial de entrenamientos",
 

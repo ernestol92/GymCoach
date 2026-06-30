@@ -20,8 +20,7 @@ const BackButton = () => {
             backgroundSize: '20px 20px', 
             backgroundRepeat: 'no-repeat', 
             backgroundPosition: 'center',
-            borderRadius: '8px', 
-            
+            borderRadius: '8px',
             }}>
       </button>
     </div>

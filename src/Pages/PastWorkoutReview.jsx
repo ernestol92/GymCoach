@@ -113,7 +113,7 @@ const WorkoutHistory = () => {
                 </div>
               </div>
 
-              <div className="set-table">
+              <div className="set-table card-fx">
                 <div className="set-table-head workout-head">
                   <span className='transparent'>{t('workoutReview.exercise')}</span>
                   <span className='transparent'>{t('keywords.set')}</span>
@@ -123,7 +123,7 @@ const WorkoutHistory = () => {
 
                 {rows.map((row) => (
                   <div className="set-table-row workout-row" key={row.id}>
-                    <span >{row.exercise_name}</span>
+                    <span>{row.exercise_name}</span>
                     <span>{row.sets || '-'}</span>
                     <span>
                       {row.reps
