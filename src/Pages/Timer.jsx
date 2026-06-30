@@ -30,12 +30,12 @@ const Timer = () => {
 
   return (
     <>
-    <div className='start-page-column'>
+    <div className='start-page-column transparent'>
       <BackButton />
-      <div className="timer">
-        <h2>{formatTime(seconds)}</h2>
+      <div className="timer transparent">
+        <h2 className='transparent'>{formatTime(seconds)}</h2>
 
-        <div className="timer-controls">
+        <div className="timer-controls transparent">
           {!isRunning ? (
             <button className='timer-btn' onClick={() => setIsRunning(true)}>{t("timer.start")}</button>
           ) : (

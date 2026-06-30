@@ -110,7 +110,7 @@ const BackupData = () => {
   }
 
   return (
-    <div className="backup-page">
+    <div className="backup-page transparent">
       <BackButton />
       <div className="backup-card">
         <h1 className="backup-title">{t('backupData.title')}</h1>
@@ -118,7 +118,7 @@ const BackupData = () => {
           {t('backupData.description')}
         </p>
 
-        <div className="backup-actions">
+        <div className="backup-actions transparent">
           <button
             className="backup-btn"
             onClick={handleExport}

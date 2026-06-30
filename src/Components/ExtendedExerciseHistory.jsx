@@ -64,10 +64,10 @@ const ExtendedExerciseHistory = () => {
   const isStrengthExercise = exerciseRow?.type === 'strength'
 
   return (
-    <div className="history-page">
-      <div className="history-card-wrapper">
+    <div className="history-page transparent">
+      <div className="history-card-wrapper transparent">
         <BackButton className="justify-self-left"/>
-        <div className="history-header">
+        <div className="history-header transparent">
           <h2 className="history-title">{t(`exercises.${exercise}`)}</h2>
         </div>
 

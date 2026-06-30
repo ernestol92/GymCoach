@@ -7,7 +7,7 @@ const HistoryToSee = () => {
   const { t } = useTranslation(); 
   return (
       
-      <div className='start-page-column'>
+      <div className='start-page-column transparent'>
         <BackButton />
           <Link to="exerciseHistory" className='start-card card-fx'>{t('historyToSee.exerciseHistory')}</Link>
           <Link to="workoutHistory" className='start-card card-fx'>{t('historyToSee.workoutHistory')}</Link>

@@ -90,13 +90,13 @@ const WorkoutHistory = () => {
   }
 
   return (
-    <div className="history-page">
+    <div className="history-page transparent">
       
-      <div className="history-card-wrapper">
+      <div className="history-card-wrapper transparent">
         <BackButton className="justify-self-left"/>
-        <div className="history-header">
-          <h2 className="history-title">{t('workoutReview.title')}</h2>
-          <p className="history-subtitle">{t('workoutReview.3latest')}</p>
+        <div className="history-header transparent">
+          <h2 className="history-title transparent">{t('workoutReview.title')}</h2>
+          <p className="history-subtitle transparent">{t('workoutReview.3latest')}</p>
         </div>
 
         {groupedHistory.length === 0 ? (
@@ -115,15 +115,15 @@ const WorkoutHistory = () => {
 
               <div className="set-table">
                 <div className="set-table-head workout-head">
-                  <span>{t('workoutReview.exercise')}</span>
-                  <span>{t('keywords.set')}</span>
-                  <span>{t('workoutReview.totalRepTime')}</span>
-                  <span>{t('workoutReview.totalWeightDistance')}</span>
+                  <span className='transparent'>{t('workoutReview.exercise')}</span>
+                  <span className='transparent'>{t('keywords.set')}</span>
+                  <span className='transparent'>{t('workoutReview.totalRepTime')}</span>
+                  <span className='transparent'>{t('workoutReview.totalWeightDistance')}</span>
                 </div>
 
                 {rows.map((row) => (
                   <div className="set-table-row workout-row" key={row.id}>
-                    <span>{row.exercise_name}</span>
+                    <span >{row.exercise_name}</span>
                     <span>{row.sets || '-'}</span>
                     <span>
                       {row.reps

@@ -12,22 +12,22 @@ const GenericExercises = () => {
     const { t } = useTranslation();
 
   return (
-    <div className='p-2'>
-        <div className='List'>
+    <div className='p-2 transparent'>
+        <div className='List transparent'>
 
             {defaultExercises.map((item)=>{
 
                 if(item.muscleKey){
                     return <h2 
                             key={item.muscleKey}
-                            className='mb mt'>
+                            className='mb mt transparent'>
                                 {t(`exercises.${item.muscleKey}`)}
                             
                             </h2>
                 }
 
                 return (
-                    <p key={item.exerciseKey}>{"- "} 
+                    <p key={item.exerciseKey} className='transparent'>{"- "} 
                     {t(`exercises.${item.exerciseKey}`)}
                     </p>
                 )
