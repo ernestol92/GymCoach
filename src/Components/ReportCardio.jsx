@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useState } from 'react';
 import { db } from '../db/db';
 import BackButton from '../Components/BackButton';
 import { useTranslation } from 'react-i18next'
+import LastTime from './LastTime';
 
 const ReportCardio = () => {
     const { exercise } = useParams();
@@ -12,18 +13,19 @@ const ReportCardio = () => {
         const [distance, setDistance] = useState(0)
         const [duration, setDuration] = useState(0)
         const [intervals, setIntervals] = useState([]);
+        const [exercise_id, setExercise_id] = useState(null)
     
-        const handleDecreaseDistance = ()=> {
-            setDistance(prev => Math.max(0, prev - 1));
-        }
+        const handleDecreaseDistance = () => {
+            setDistance(prev => Math.max(0, +(prev - 0.1).toFixed(1)));
+        };
     
         const handleDecreaseDuration = ()=> {
             setDuration(prev => Math.max(0, prev - 1));
         }
     
-        const handleIncreaseDistance = ()=> {
-            setDistance(prev => prev + 1);
-        }
+        const handleIncreaseDistance = () => {
+            setDistance(prev => +(prev + 0.1).toFixed(1));
+        };
     
         const handleIncreaseDuration = ()=> {
             setDuration(prev => prev + 1);
@@ -43,9 +45,10 @@ const ReportCardio = () => {
         }
     
         const handleSaveReport = async () => {
+            console.log(exercise)
             const allIntervals = commitCurrentInterval();
             if(allIntervals.length === 0) return;
-            const exerciseRow = await db.exercises.where("exercise").equalsIgnoreCase(exercise).first();
+            const exerciseRow = await db.exercises.where("exerciseKey").equalsIgnoreCase(exercise).first();
             if(!exerciseRow) return console.error("Exercise not found");
             const sessionId = crypto.randomUUID();
             const now = new Date();
@@ -67,6 +70,19 @@ const ReportCardio = () => {
             setDuration(0);
            
         }
+
+        useEffect(() => {
+            const fetchExerciseId = async ()=>{
+                const row = await db.exercises
+                    .where('exerciseKey')
+                    .equalsIgnoreCase(exercise)
+                    .first();
+
+                setExercise_id(row?.id ?? null)
+            }
+
+            fetchExerciseId();
+        }, [exercise])
   return (
     <>
         <div className='start-page-column transparent'>
@@ -74,48 +90,44 @@ const ReportCardio = () => {
                 <BackButton/>
                 <h2 className='exerciseName breadCrumb'>{exercise}</h2>
             </div>
-
+            
             <div className='exerciseList transparent'>
-                
+                <LastTime exercise_id={exercise_id}/>
                 
                 <div className='reportSet glass-dark'>
                     <div className='set mb3'>
                         <h3>{t('reportCardio.interval')}</h3>
                     </div>
                     <p>{t('reportCardio.distance')}:</p>
-                    <input
-                        className='slider'
-                        type="range"
-                        min="0"
-                        max="100"
-                        value={distance}
-                        onChange={(e) => setDistance(parseInt(e.target.value))}
-                    />
+                    
                     <div className='btnWrapper'>
                         <button  className='subAddBtn' onClick={handleDecreaseDistance}>-</button>
                         <input
                             className='numberInput'
                             type="number"
                             inputMode="decimal"
-                            pattern="[0-9]*"
-                            step="1"
+                            // pattern="[0-9]*"
+                            step="0.1"
+                            min="0"
                             value={distance}
-                            onChange={(e) => setDistance(parseInt(e.target.value))}
+                            onChange={(e) => setDistance(parseFloat(e.target.value) || 0)}
                         />
                         <button className='subAddBtn' onClick={handleIncreaseDistance}>+</button>
                         
                     </div>
-                    <span className='mb3'>km</span>
-                    {/* ////////////////////////////////////Weight///////////////////////////////////  */}
-                    <p>{t('reportCardio.duration')}:</p>
+                    <span className='mb'>km</span>
                     <input
-                        className='slider'
+                        className='slider mb3'
                         type="range"
                         min="0"
-                        max="500"
-                        value={duration}
-                        onChange={(e) => setDuration(Number(e.target.value))}
+                        max="100"
+                        step="0.1"
+                        value={distance}
+                        onChange={(e) => setDistance(parseFloat(e.target.value))}
                     />
+                    {/* ////////////////////////////////////Weight///////////////////////////////////  */}
+                    <p>{t('reportCardio.duration')}:</p>
+                    
                     <div className='btnWrapper'>
                         <button className='subAddBtn' onClick={handleDecreaseDuration}>-</button>
                         <input
@@ -129,7 +141,15 @@ const ReportCardio = () => {
                         />
                         <button className='subAddBtn' onClick={handleIncreaseDuration}>+</button>
                     </div>
-                    <span className='mb3'>min</span>
+                    <span className='mb'>min</span>
+                    <input
+                        className='slider mb3'
+                        type="range"
+                        min="0"
+                        max="500"
+                        value={duration}
+                        onChange={(e) => setDuration(Number(e.target.value))}
+                    />
                     <p> {t('reportCardio.intervalReported')}:</p>
                     {intervals.map((interval, index) => <span className='reportedSets' key={index}> {t('reportCardio.interval')} {index + 1}: {interval.distance} km, {interval.duration} min</span>)}
                 </div>

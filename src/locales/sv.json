@@ -32,6 +32,8 @@
     "sets": "Set",
     "weight": "Vikt",
     "duration": "Tid",
+    "distance": "Distans",
+    "km": "km",
     "upperbody": "Överkropp",
     "lowerbody": "Underkropp",
     "cardio": "Kondition",

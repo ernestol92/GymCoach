@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 const LastTime = ({ exercise_id }) => {
   const { t } = useTranslation()
   const [lastSession, setLastSession] = useState([])
+  const [exerciseType, setExerciseType] = useState([])
 
   useEffect(() => {
     const fetchLastSession = async () => {
@@ -21,6 +22,8 @@ const LastTime = ({ exercise_id }) => {
         setLastSession(null)
         return
       }
+      const getExerciseRow = await db.exercises.where("id").equals(exercise_id).first()
+      setExerciseType(getExerciseRow.type);
 
       const sessionRows = await db.history
         .where("session_id")
@@ -37,7 +40,7 @@ const LastTime = ({ exercise_id }) => {
   }, [exercise_id])
 
   return (
-    <div className="lastTime">
+    <div className="lastTime transparent glass-dark">
 
       <div className="lastTime-title">
         <div>{t("lastTime.title")}</div>
@@ -48,12 +51,20 @@ const LastTime = ({ exercise_id }) => {
         </div>
       </div>
 
-      <div className="lastTime-summary">
+            {/* i need to access the data on last cardioexercise and render below instead of set and reps */}
+      <div className="lastTime-summary transparent">
         {lastSession && lastSession.length > 0 ? (
           lastSession.map((set, index) => (
-            <div key={index} className="lastTime-set">
+            ( exerciseType === "strength" ? (
+              <div key={index} className="lastTime-set transparent">
               {set.reps} {t("keywords.reps")}, {set.weight}kg
             </div>
+            ): (
+              <div key={index} className="lastTime-set transparent">
+              {set.distance} {t("keywords.km")}, {set.duration}min
+            </div>
+            ))
+            
           ))
         ) : (
           <div className="lastTime-set">

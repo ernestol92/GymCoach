@@ -11,10 +11,11 @@ const ReportExercise = () => {
     const navigate = useNavigate();
     const { t } = useTranslation();
     const { exercise } = useParams();
-    const [reps, setReps] = useState(0)
-    const [weight, setWeight] = useState(0)
+    const [reps, setReps] = useState(0);
+    const [weight, setWeight] = useState(0);
     const [sets, setSets] = useState([]);
-    const [exercise_id, setExercise_id] = useState(null)
+    const [exercise_id, setExercise_id] = useState(null);
+    const [exerciseName, setExerciseName] = useState("");
 
     useEffect(() => {
         const fetchExerciseId = async () => {
@@ -23,8 +24,8 @@ const ReportExercise = () => {
             .equalsIgnoreCase(exercise)
             .first();
 
-            console.log("exercise param:", exercise, "row:", row);
             setExercise_id(row?.id ?? null);
+            setExerciseName(row?.exercise || t(`exercises.${row?.exerciseKey}`) )
         };
 
         fetchExerciseId();
@@ -93,7 +94,7 @@ const ReportExercise = () => {
             
             <div className='transparent'>
                 <BackButton/>
-                <h2 className='exerciseName breadCrumb'>{t(`exercises.${exercise}`)}</h2>
+                <h2 className='exerciseName breadCrumb'>{exerciseName}</h2>
             </div>
 
             <div className='exerciseList transparent'>
@@ -103,15 +104,8 @@ const ReportExercise = () => {
                         <h3> {t("keywords.set")} {sets.length + 1}</h3>
                     </div>
                     <p>{t("keywords.reps")}:</p>
-                    <input
-                        className='slider'
-                        type="range"
-                        min="0"
-                        max="30"
-                        value={reps}
-                        onChange={(e) => setReps(Number(e.target.value))}
-                    />
-                    <div className='btnWrapper mb3'>
+                    
+                    <div className='btnWrapper mb'>
                         <button onClick={handleDecreaseReps} className='subAddBtn'>-</button>
                         <input
                             className='numberInput'
@@ -124,17 +118,17 @@ const ReportExercise = () => {
                         />
                         <button onClick={handleIncreaseReps} className='subAddBtn'>+</button>
                     </div>
-                    {/* ////////////////////////////////////Weight///////////////////////////////////  */}
-                    <p>{t("keywords.weight")}:</p>
                     <input
-                        className='slider'
+                        className='slider mb3'
                         type="range"
                         min="0"
-                        max="300"
-                        value={weight}
-                        onChange={(e) => setWeight(Number(e.target.value))}
-                        
+                        max="30"
+                        value={reps}
+                        onChange={(e) => setReps(Number(e.target.value))}
                     />
+                    {/* ////////////////////////////////////Weight///////////////////////////////////  */}
+                    <p>{t("keywords.weight")}:</p>
+                    
                     <div className='btnWrapper'>
                         <button onClick={handleDecreaseWeight} className='subAddBtn'>-</button>
                         <input
@@ -148,7 +142,16 @@ const ReportExercise = () => {
                         />
                         <button onClick={handleIncreaseWeight} className='subAddBtn'>+</button>
                     </div>
-                    <span className='mb3'>kg</span>
+                    <span className='mb'>kg</span>
+                    <input
+                        className='slider mb3'
+                        type="range"
+                        min="0"
+                        max="300"
+                        value={weight}
+                        onChange={(e) => setWeight(Number(e.target.value))}
+                        
+                    />
                     <p>{sets.length} {t("reportexercise.setsReported")}</p>
                     {sets.map((set, index) => <span className='reportedSets' key={index}>{t("keywords.set")} {index + 1}: {set.reps} {t("keywords.reps")}, {set.weight}kg</span>)}
                 </div>

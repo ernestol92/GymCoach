@@ -29,12 +29,6 @@ const ExerciseToReport = ({ mode }) => {
         const filteredExercises = exercises.filter(x => x !== undefined);
 
         setExercises(filteredExercises);
-
-        // const filteredExercises = exercises.filter(x => x !== undefined);
-        // console.log(filteredExercises);
-
-        // const exerciseNames = filteredExercises.map(x => x.exerciseKey ? t(`exercises.${x.exerciseKey}`) : x.exercise);
-        // setExercises(exerciseNames);
         }
 
         fetchExercises();
@@ -60,11 +54,11 @@ const ExerciseToReport = ({ mode }) => {
                 </> 
                 }
                 {exercises.map((exercise) => {
-                    const displayName = exercise.exerciseKey 
-                        ? t(`exercises.${exercise.exerciseKey}`)
-                        : exercise.exercise;
+                    const displayName = exercise.isCustom
+                        ? exercise.exercise
+                        : t(`exercises.${exercise.exerciseKey}`);
                     
-                    const routeValue = exercise.exerciseKey || exercise.exercise;
+                    const routeValue = exercise.exerciseKey;
 
                     return (
                         <Link key={exercise.id} to={`${routeValue}`} className='exerciseListBtn'>{displayName}</Link>

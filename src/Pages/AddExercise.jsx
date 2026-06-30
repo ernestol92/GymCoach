@@ -3,7 +3,7 @@ import { db } from "../db/db.js";
 import { Link, useNavigate } from 'react-router-dom';
 import BackButton from '../Components/BackButton';
 import { useTranslation } from 'react-i18next'
-
+import { createExerciseKey } from '../helpers/createExerciseKey.jsx'
 
 const AddExercise = () => {
 
@@ -26,12 +26,15 @@ const muscles = {
 const handleAddExercise = async () => {
 
   if (!exerciseName || isSaving) return;
-
+  setIsSaving(true);
+  setError("");
   // 1. Create exercise
   try{
     const exerciseId = await db.exercises.add({
-      exercise: exerciseName.trim().toLowerCase(),
-      type: type.trim().toLowerCase()
+      exerciseKey: createExerciseKey(exerciseName),
+      exercise: exerciseName.trim(),
+      type: type.trim().toLowerCase(),
+      isCustom: true
     });
     if (type === "strength" && isMuscle){
         const muscle = await db.muscles.get({ muscle: isMuscle });
@@ -154,8 +157,6 @@ const handleAddExercise = async () => {
           </div>
         )}
 
-        <small className='text-center transparent'>OR</small>
-        
         <small className='text-center transparent'>OR</small>
 
         <div className='start-card card-fx text-div mt3'>

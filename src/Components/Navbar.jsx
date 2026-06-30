@@ -1,13 +1,20 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import { LanguageIcon, HomeIcon} from '@heroicons/react/24/solid';
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useMemo } from 'react'
 import i18n from '../i18n';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const dropdownRef = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
   const [selected, setSelected] = useState(false)
+  const { t } = useTranslation();
+  const messages = useMemo(() => {
+    return t("coach.messages", { returnObjects: true });
+  }, [t]);
+  const [coachMessage, setCoachMessage] = useState("");
+  const [showCoachMessage, setShowCoachMessage] = useState(false);
 
 
   const handleClick = () => {
@@ -19,6 +26,32 @@ const Navbar = () => {
     setSelected(language);
     setIsOpen(false);
   }
+
+  useEffect(() => {
+  if (!Array.isArray(messages) || messages.length === 0) return;
+
+  let timeoutId;
+
+  const showRandomMessage = () => {
+    const random = messages[Math.floor(Math.random() * messages.length)];
+
+    setCoachMessage(random);
+    setShowCoachMessage(true);
+
+    timeoutId = setTimeout(() => {
+      setShowCoachMessage(false);
+    }, 8000);
+  };
+
+  showRandomMessage();
+
+  const intervalId = setInterval(showRandomMessage, 300000);
+
+  return () => {
+    clearInterval(intervalId);
+    clearTimeout(timeoutId);
+  };
+}, [messages]);
 
   useEffect(() => {
   const handleClickOutside = (event) => {
@@ -43,6 +76,11 @@ const Navbar = () => {
                 GYM COACH
               </Link>
 
+              {showCoachMessage && (
+                <div className="coach">
+                  <p>{coachMessage}</p>
+                </div>
+              )}
 
               <div className='Navbar-icons'>
                 {/* <Link to="/">

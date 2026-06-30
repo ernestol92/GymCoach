@@ -32,6 +32,8 @@
     "set": "Set",
     "sets": "Sets",
     "weight": "Weight",
+    "distance": "Distance",
+    "km": "km",
     "duration": "Duration",
     "upperbody": "Upper Body",
     "lowerbody": "Lower Body",
@@ -125,6 +127,62 @@
     "exportFailed": "Something went wrong while exporting your data.",
     "importSuccess": "Import completed successfully.",
     "importFailed": "Import failed. Please check that the file is a valid backup."
-    }
+    },
+
+  "coach": {
+  "messages": [
+    "Ready to crush it?",
+    "Let's get this over with.",
+    "No excuses today.",
+    "Stay focused.",
+    "Small steps. Big results.",
+    "You're stronger than yesterday.",
+    "Discipline beats motivation.",
+    "Progress starts now.",
+    "You got this!",
+    "Don't skip leg day.",
+    "Make the next set count.",
+    "Rest. Then attack.",
+    "Your future self approves.",
+    "Consistency wins.",
+    "Pain is temporary.",
+    "Train smart. Train hard.",
+    "Weights don't lift themselves.",
+    "Keep moving.",
+    "Finish strong!",
+    "The hardest set is the first.",
+    "Earn your protein shake.",
+    "You're here. That's half the battle.",
+    "Less scrolling. More squatting.",
+    "You're paying for the gym.",
+    "Lift first. Flex later.",
+    "Save the drama. Lift.",
+    "Still alive? Good.",
+    "That's enough resting, superstar.",
+    "Rest time is over. Sorry.",
+    "Rise and shine princess."
+    
+  ],
+  "setCompleted": [
+    "Again.",
+    "Nice... now do another.",
+    "Good set.",
+    "Clean work.",
+    "That counts.",
+    "One set closer.",
+    "Keep the pressure on.",
+    "Solid effort.",
+    "Now breathe.",
+    "Rest. Then repeat.",
+    "Stack the sets.",
+    "Good. Don’t stop now.",
+    "Next one matters.",
+    "Strong work.",
+    "Set logged. Keep going.",
+    "Progress recorded.",
+    "Another brick laid.",
+    "Still got more in you."
+  ]
+}
   
 }
