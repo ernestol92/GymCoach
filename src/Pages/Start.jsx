@@ -10,7 +10,7 @@ const Start = () => {
 
   return (
     <div className='container'>
-      <div className='start-page-column'>
+      <div className='start-page-column start-bg'>
 
             <div className='banner'>
               <h1 className='start-title text-div transparent'>{t("welcome.title")}<span className='orbitron-font white-color transparent'>{t("welcome.title2")}</span></h1>

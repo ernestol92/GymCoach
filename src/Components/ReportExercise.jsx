@@ -89,14 +89,14 @@ const ReportExercise = () => {
 
   return (
     <>
-        <div className='start-page-column'>
+        <div className='start-page-column transparent'>
             
-            <div>
+            <div className='transparent'>
                 <BackButton/>
                 <h2 className='exerciseName breadCrumb'>{t(`exercises.${exercise}`)}</h2>
             </div>
 
-            <div className='exerciseList'>
+            <div className='exerciseList transparent'>
                 <LastTime exercise_id={exercise_id} />
                 <div className='reportSet'>
                     <div className='set mb '>

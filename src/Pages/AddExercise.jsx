@@ -80,10 +80,10 @@ const handleAddExercise = async () => {
 
 
   return (
-    <div className='p-2'>
-        <div className='backBtn-and-title'>
+    <div className='p-2 transparent'>
+        <div className='backBtn-and-title transparent'>
           <BackButton/>
-          <h2 className='breadCrumb'>{t('addExercise')}</h2>
+          <h2 className='breadCrumb transparent'>{t('addExercise')}</h2>
         </div>
         <select name="Category" id="" className='selectStyle mt' onChange={ (e) => {setCategory(e.target.value), setIsMuscle(null), setExerciseName("")}}>
             <option value="">{t('selectCategory')}</option>
@@ -126,7 +126,7 @@ const handleAddExercise = async () => {
         )}
 
         {category === "cardio" && (
-          <div className='flex-col'>
+          <div className='flex-col transparent'>
             <label htmlFor="">{t('exerciseName')}:</label>
             <input 
               className='input' 
@@ -135,12 +135,12 @@ const handleAddExercise = async () => {
               value={exerciseName} 
               onChange={(e)=>setExerciseName(e.target.value)}/>
 
-            <button className='add-btn' disabled={!exerciseName} onClick={handleAddExercise}>{t('add')}</button>
+            <button className='add-btn mb3 mt' disabled={!exerciseName} onClick={handleAddExercise}>{t('add')}</button>
           </div>
         )}
 
         {isMuscle && (
-          <div className='flex-col'>
+          <div className='flex-col transparent'>
             <label htmlFor="">{t('exerciseName')}:</label>
             <input 
               className='input' 
@@ -150,7 +150,7 @@ const handleAddExercise = async () => {
               onChange={(e)=>setExerciseName(e.target.value)}/>
 
             <button 
-              className='add-btn' 
+              className='add-btn mb3 mt' 
               disabled={isSaving || !exerciseName} 
               onClick={handleAddExercise}
               >{isSaving? t("saving"): saved? t("saved"): t("add")}
@@ -159,7 +159,7 @@ const handleAddExercise = async () => {
           </div>
         )}
 
-        <small className='text-center'>OR</small>
+        <small className='text-center transparent'>OR</small>
 
         <div className='start-card card-fx text-div mt3'>
           <h3 className='text-div'>Not sure what exercise to add?</h3>

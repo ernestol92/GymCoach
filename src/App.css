@@ -127,10 +127,21 @@
     width: 100%;
     max-width: 430px;
     padding: 2rem;
-    gap: 1rem;
+    gap: 2rem;
     flex-direction: column;
     justify-content: start;
+}
 
+.start-bg{
+  background-image: url('/bgcliff.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carbon-bg{
+  background-image: url('/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .grid{
@@ -165,7 +176,7 @@
 }
 
 .start-title{
-  font-size: 3rem;
+  font-size: 2.8rem;
     font-weight: 700;
     color: #c1ff00;
     font-family: "Orbitron", sans-serif;

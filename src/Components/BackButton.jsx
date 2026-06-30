@@ -10,7 +10,7 @@ const BackButton = () => {
   }
 
   return (
-    <div>
+    <div className='transparent'>
       <button 
         onClick={handleBack} 
         style={{ 

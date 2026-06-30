@@ -8,10 +8,10 @@ const LowerBody = ({ mode }) => {
   const base = import.meta.env.BASE_URL;
   return (
     <>
-      <div className='start-page-column'>
-        <div className='backBtn-and-title'>
+      <div className='start-page-column transparent'>
+        <div className='backBtn-and-title transparent'>
           <BackButton/>
-          <h2 className='breadCrumb'>{mode === "history" ? t('keywords.history') : t('keywords.report')}</h2>
+          <h2 className='breadCrumb transparent'>{mode === "history" ? t('keywords.history') : t('keywords.report')}</h2>
 
         </div>
         <div className='grid'>

@@ -43,16 +43,16 @@ const ExerciseToReport = ({ mode }) => {
     
   return (
     <>
-        <div className='start-page-column'>
-            <div>
+        <div className='start-page-column transparent'>
+            <div className='transparent'>
                 <BackButton/>
-                <h2 className='breadCrumb'>
+                <h2 className='breadCrumb transparent'>
                     {mode === "history"
                         ? t('group.historyTitle', { group: t(`keywords.${group.toLowerCase()}`) })
                         : t('group.reportTitle', { group: t(`keywords.${group.toLowerCase()}`) })}
                 </h2>
             </div>
-            <div className='exerciseList'>
+            <div className='exerciseList transparent'>
                 {(!exercises || exercises.length === 0) &&
                 <>
                     <p>{t('group.notFound')}</p>

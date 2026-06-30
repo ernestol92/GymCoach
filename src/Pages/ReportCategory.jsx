@@ -10,10 +10,10 @@ const ReportCategory = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className='start-page-column'>
-        <div>
+      <div className='start-page-column transparent'>
+        <div className='transparent'>
           <BackButton/>
-          <h2 className='breadCrumb'>{action ? t('keywords.history') : t('keywords.report')}</h2>
+          <h2 className='breadCrumb transparent'>{action ? t('keywords.history') : t('keywords.report')}</h2>
 
         </div>
             <Link 

@@ -69,13 +69,13 @@ const ReportCardio = () => {
         }
   return (
     <>
-        <div className='start-page-column'>
-            <div>
+        <div className='start-page-column transparent'>
+            <div className='transparent'>
                 <BackButton/>
                 <h2 className='exerciseName breadCrumb'>{exercise}</h2>
             </div>
 
-            <div className='exerciseList'>
+            <div className='exerciseList transparent'>
                 
                 
                 <div className='reportSet'>

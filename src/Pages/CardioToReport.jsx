@@ -25,10 +25,10 @@ const CardioToReport = ({mode}) => {
 
   return (
     <>
-        <div className='start-page-column'>
-            <div className='backBtn-and-title'>
+        <div className='start-page-column transparent'>
+            <div className='backBtn-and-title transparent'>
                 <BackButton/>
-                <h2 className='breadCrumb'>
+                <h2 className='breadCrumb transparent'>
                 {mode === "history"
                     ? t('group.historyTitle', { group: t(`keywords.${group.toLowerCase()}`) })
                     : t('group.reportTitle', { group: t(`keywords.${group.toLowerCase()}`) })}
