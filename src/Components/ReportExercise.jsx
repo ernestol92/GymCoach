@@ -19,7 +19,7 @@ const ReportExercise = () => {
     useEffect(() => {
         const fetchExerciseId = async () => {
             const row = await db.exercises
-            .where("exercise")
+            .where("exerciseKey")
             .equalsIgnoreCase(exercise)
             .first();
 
@@ -63,7 +63,7 @@ const ReportExercise = () => {
     const handleSaveReport = async () => {
         const allSets = commitCurrentSet();
         if(allSets.length === 0) return;
-        const exerciseRow = await db.exercises.where("exercise").equalsIgnoreCase(exercise).first();
+        const exerciseRow = await db.exercises.where("exerciseKey").equalsIgnoreCase(exercise).first();
         if(!exerciseRow) return console.error("Exercise not found");
         const sessionId = crypto.randomUUID();
         const now = new Date();
@@ -93,7 +93,7 @@ const ReportExercise = () => {
             
             <div>
                 <BackButton/>
-                <h2 className='exerciseName breadCrumb'>{exercise}</h2>
+                <h2 className='exerciseName breadCrumb'>{t(`exercises.${exercise}`)}</h2>
             </div>
 
             <div className='exerciseList'>
