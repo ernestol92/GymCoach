@@ -38,7 +38,10 @@ const Navbar = () => {
   return (
     <div ref={dropdownRef}>
       <div className='header'>
-              <Link to="/" className='logo'>GYM COACH</Link>
+              <Link to="/" className='logo'>
+                <img className='favicon' src="./favicon.png" alt="" />
+                GYM COACH
+              </Link>
 
 
               <div className='Navbar-icons'>

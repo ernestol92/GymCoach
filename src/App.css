@@ -69,6 +69,10 @@
   gap: 2rem;
 }
 
+.favicon{
+  height: 2.5rem;
+}
+
 .language-btn{
   background-color: transparent;
   border: none;
@@ -77,8 +81,11 @@
 .logo{
   font-family: "Orbitron", sans-serif;
   color: #c1ff00;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .dropdown{
@@ -442,6 +449,7 @@
   margin-top: 3rem;
 }
 
+
 .reportWrapper{
   display: flex;
   gap: 2rem;
@@ -693,6 +701,13 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
   margin-bottom: 1rem;
+  background: transparent;
+}
+
+.history-summary{
+  /* padding: .3rem;
+  border-radius: 8px; */
+  background: transparent;
 }
 
 .summary-box {

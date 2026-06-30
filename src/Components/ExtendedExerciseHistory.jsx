@@ -16,7 +16,7 @@ const ExtendedExerciseHistory = () => {
       if (!exercise) return
 
       const foundExercise = await db.exercises
-        .where('exercise')
+        .where('exerciseKey')
         .equalsIgnoreCase(exercise)
         .first()
 
@@ -68,7 +68,7 @@ const ExtendedExerciseHistory = () => {
       <div className="history-card-wrapper">
         <BackButton className="justify-self-left"/>
         <div className="history-header">
-          <h2 className="history-title">{exercise}</h2>
+          <h2 className="history-title">{t(`exercises.${exercise}`)}</h2>
         </div>
 
         {groupedHistory.length === 0 ? (
@@ -91,14 +91,14 @@ const ExtendedExerciseHistory = () => {
                 </div>
 
                 <div className="history-summary-grid">
-                  <div className="summary-box">
-                    <span className="summary-label">{t('extendedHistory.bestWeight')}</span>
-                    <span className="summary-value">{bestWeight || '-'} kg</span>
+                  <div className="summary-box card-fx">
+                    <span className="summary-label history-summary">{t('extendedHistory.bestWeight')}</span>
+                    <span className="summary-value history-summary">{bestWeight || '-'} kg</span>
                   </div>
 
-                  <div className="summary-box">
-                    <span className="summary-label">{t('extendedHistory.totalReps')}</span>
-                    <span className="summary-value">{totalReps || '-'}</span>
+                  <div className="summary-box card-fx">
+                    <span className="summary-label history-summary">{t('extendedHistory.totalReps')}</span>
+                    <span className="summary-value history-summary">{totalReps || '-'}</span>
                   </div>
 
                   {!isStrengthExercise && (
@@ -116,15 +116,15 @@ const ExtendedExerciseHistory = () => {
                   )}
                 </div>
 
-                <div className="set-list">
+                <div className="set-list transparent">
                   {rows.map((row, index) => (
-                    <div className="set-row" key={row.id}>
+                    <div className="set-row card-fx" key={row.id}>
                       <div className="set-index">#{index + 1}</div>
 
-                      <div className="set-metrics">
-                        <span>{row.sets ? `Set ${row.sets}` : `Entry ${index + 1}`}</span>
-                        {row.reps ? <span>{row.reps} reps</span> : null}
-                        {row.weight ? <span>{row.weight} kg</span> : null}
+                      <div className="set-metrics transparent">
+                        <span className='card-fx'>{row.sets ? `Set ${row.sets}` : `Entry ${index + 1}`}</span>
+                        {row.reps ? <span className='card-fx'>{row.reps} reps</span> : null}
+                        {row.weight ? <span className='card-fx'>{row.weight} kg</span> : null}
                         {!isStrengthExercise && row.duration ? <span>{row.duration} min</span> : null}
                         {!isStrengthExercise && row.distance ? <span>{row.distance} km</span> : null}
                       </div>
