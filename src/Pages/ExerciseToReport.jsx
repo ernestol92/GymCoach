@@ -49,7 +49,7 @@ const ExerciseToReport = ({ mode }) => {
             <div className='exerciseList transparent'>
                 {(!exercises || exercises.length === 0) &&
                 <>
-                    <p>{t('group.notFound')}</p>
+                    <p className='transparent'>{t('group.notFound')}</p>
                     <CreateExerciseLinkBtn/>
                 </> 
                 }
