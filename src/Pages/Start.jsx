@@ -76,7 +76,7 @@ const Start = () => {
               </div>
             </Link>
 
-            <Link to="#" className='start-card card-fx'>
+            <Link to="/library" className='start-card card-fx'>
               <IconCashEdit
                 size={170}
                 stroke={1}

@@ -19,6 +19,7 @@ import Cardio from './Pages/Cardio';
 import PastWorkoutReview from './Pages/PastWorkoutReview';
 import BackupData from './Pages/BackupData';
 import GenericExercises from './Pages/GenericExercises';
+import ExerciseEditPage from './Pages/ExerciseEditPage';
 
 
 const App = () => {
@@ -31,6 +32,8 @@ const App = () => {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Start/>} />
+
+        {/* Report paths */}
         <Route path="/reportCategory" element={<ReportCategory />} />
         <Route path='/reportCategory/UpperBody' element={<UpperBody/>}></Route>
         <Route path='/reportCategory/LowerBody' element={<LowerBody/>}></Route>
@@ -42,10 +45,14 @@ const App = () => {
         <Route path='/reportCategory/LowerBody/:group/:exercise' element={<ReportExercise/>}></Route>
         <Route path='/reportCategory/:group/:exercise' element={<ReportCardio/>}></Route>
         
+        {/* Adding exercises */}
         <Route path='/addExercise' element={<AddExercise />}></Route>
         <Route path='/addExercise/genericList' element={<GenericExercises/>}></Route>
-        
+        {/* Timer */}
         <Route path='/timer'element={<Timer />}></Route>
+
+        {/* Library */}
+        <Route path='/library' element={<ExerciseEditPage/>}></Route>
 
         {/* History sections */}
         <Route path='/history'element={<HistoryToSee />}></Route>
