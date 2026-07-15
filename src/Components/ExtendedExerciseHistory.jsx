@@ -68,7 +68,12 @@ const ExtendedExerciseHistory = () => {
       <div className="history-card-wrapper transparent">
         <BackButton className="justify-self-left"/>
         <div className="history-header transparent">
-          <h2 className="history-title">{t(`exercises.${exercise}`)}</h2>
+          {(() => {
+            const displayName = exerciseRow?.isCustom
+              ? exerciseRow.exercise
+              : t(`exercises.${exerciseRow?.exerciseKey}`)
+            return <h2 className="history-title">{displayName}</h2>
+          })()}
         </div>
 
         {groupedHistory.length === 0 ? (
@@ -119,10 +124,9 @@ const ExtendedExerciseHistory = () => {
                 <div className="set-list transparent">
                   {rows.map((row, index) => (
                     <div className="set-row card-fx" key={row.id}>
-                      <div className="set-index">#{index + 1}</div>
+                      <div className="set-index">Set {index + 1}</div>
 
                       <div className="set-metrics transparent">
-                        <span className='card-fx'>{row.sets ? `Set ${row.sets}` : `Entry ${index + 1}`}</span>
                         {row.reps ? <span className='card-fx'>{row.reps} reps</span> : null}
                         {row.weight ? <span className='card-fx'>{row.weight} kg</span> : null}
                         {!isStrengthExercise && row.duration ? <span>{row.duration} min</span> : null}

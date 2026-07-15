@@ -16,6 +16,7 @@ export const seedDefaultExercises = async() => {
 
             const exerciseId = await db.exercises.add({
                 exerciseKey: item.exerciseKey,
+                exercise: item.exercise,
                 type: item.type,
                 isCustom: false
             });
