@@ -1127,3 +1127,8 @@ li::marker {
 .delete{
   background-color: #ff5100;
 }
+
+.align-center{
+  display: flex;
+  align-items: center;
+}

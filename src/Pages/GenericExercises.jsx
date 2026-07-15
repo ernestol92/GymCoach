@@ -2,6 +2,7 @@ import React from 'react'
 import defaultExercises from "../locales/defaultExercises.json";
 import { useTranslation } from "react-i18next";
 import { seedDefaultExercises } from "../db/seedDefaultExercises"
+import { IconPoint } from "@tabler/icons-react";
 
 const GenericExercises = () => {
     const handleSeedExercises = async () => {
@@ -27,7 +28,12 @@ const GenericExercises = () => {
                 }
 
                 return (
-                    <p key={item.exerciseKey} className='transparent'>{"- "} 
+                    <p key={item.exerciseKey} className='transparent mb align-center'>
+                        <IconPoint
+                            size={25}
+                            stroke={1}
+                            className='list-bullet'
+                        />
                     {t(`exercises.${item.exerciseKey}`)}
                     </p>
                 )
