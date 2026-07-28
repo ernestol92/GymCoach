@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
+import Toolbar from '../Components/Toolbar';
 import Footer from '../Components/Footer';
+
 
 const Layout = () => {
   return (
@@ -9,8 +11,10 @@ const Layout = () => {
         <Navbar/>
         <main className='content carbon-bg'>
             <Outlet/>
-        </main>
+            <Toolbar/>
         <Footer/>
+            
+        </main>
     </div>
   )
 }

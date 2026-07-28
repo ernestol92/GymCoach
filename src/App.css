@@ -53,6 +53,7 @@
   overflow-y: auto;
   width: 100%;
   min-height: 0;
+  position: relative;
 }
 
 .header{
@@ -320,7 +321,7 @@
   gap: 1rem;
 }
 
-.footer{
+.toolbar{
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #444;
@@ -332,6 +333,8 @@
   padding-top: 0.5rem;
   padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
   height: 80px;
+  position:sticky;
+  bottom: -1px;
 }
 
 
@@ -620,6 +623,16 @@
   height: 4rem;
 }
 
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  border-top: 1px solid #444;
+  
+}
+
 .footer-icon{
   fill: #5F5E5E;
 
@@ -634,6 +647,7 @@
   color: #5F5E5E;
   font-weight: 800;
   padding: 0.5rem;
+  text-align: center;
   
   span{
     color: #5F5E5E;
