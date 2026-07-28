@@ -20,7 +20,7 @@ import PastWorkoutReview from './Pages/PastWorkoutReview';
 import BackupData from './Pages/BackupData';
 import GenericExercises from './Pages/GenericExercises';
 import ExerciseEditPage from './Pages/ExerciseEditPage';
-
+import WeightLog from './Pages/WeightLog';
 
 const App = () => {
 
@@ -58,22 +58,24 @@ const App = () => {
         <Route path='/history'element={<HistoryToSee />}></Route>
         <Route path='/history/:action' element={<ReportCategory/>}></Route>
         
-        {/*  UpperBody paths */}
+        {/* History UpperBody paths */}
         <Route path='/history/exerciseHistory/UpperBody' element={<UpperBody mode="history"/>}></Route>
         <Route path='/history/exerciseHistory/UpperBody/:group' element={<ExerciseToReport mode="history"/>}></Route>
         <Route path='/history/exerciseHistory/UpperBody/:group/:exercise' element={<ExtendedExerciseHistory mode="history"/>}></Route>
         
-        {/*  LowerBody paths */}
+        {/* History LowerBody paths */}
         <Route path='/history/exerciseHistory/LowerBody' element={<LowerBody mode="history"/>}></Route>
         <Route path='/history/exerciseHistory/LowerBody/:group' element={<ExerciseToReport mode="history"/>}></Route>
         <Route path='/history/exerciseHistory/LowerBody/:group/:exercise' element={<ExtendedExerciseHistory mode="history"/>}></Route>
 
-        {/* Cardio paths */}
+        {/* History Cardio paths */}
         <Route path='/history/exerciseHistory/:group' element={<CardioToReport mode="history"/>}></Route>
-
+        {/* History latest sessions path */}
         <Route path='/history/workoutHistory' element={<PastWorkoutReview/>}></Route>
         
-        
+        <Route path='/weightLog' element={<WeightLog/>}></Route>
+
+
         <Route path='/exportImport' element={<BackupData/>}></Route>
       </Route>
     </Routes>

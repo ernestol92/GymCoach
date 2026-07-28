@@ -22,6 +22,9 @@
     "history": "History",
     "historyDesc": "View your workout history",
 
+    "weightLog": "Weight Log",
+    "weightLogDesc": "View and manage your weight tracking",
+
     "export": "Export Data",
     "exportDesc": "Export your workout data to your device"
   },

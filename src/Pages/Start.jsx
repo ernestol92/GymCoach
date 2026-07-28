@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
-import { ChartBarSquareIcon, PlusCircleIcon, ClockIcon, RectangleStackIcon, ArrowPathRoundedSquareIcon, ArrowUpOnSquareIcon, ArrowRightIcon  } from '@heroicons/react/24/solid';
+import { ChartBarSquareIcon, PlusCircleIcon, ClockIcon, RectangleStackIcon, ArrowPathRoundedSquareIcon, ArrowUpOnSquareIcon, ArrowRightIcon, ArrowTrendingDownIcon  } from '@heroicons/react/24/solid';
 import { useTranslation } from 'react-i18next'
-import { IconReport, IconClipboardPlus, IconTimeDuration15, IconHistory, IconDatabaseExport, IconCashEdit } from "@tabler/icons-react";
+import { IconReport, IconClipboardPlus, IconTimeDuration15, IconHistory, IconDatabaseExport, IconCashEdit, IconScaleOutline } from "@tabler/icons-react";
 
 
 const Start = () => {
@@ -110,6 +110,26 @@ const Start = () => {
               <div className='text-div'>
                 <ArrowRightIcon className="text-div icon-sm" />
               </div>
+            </Link>
+
+            <Link to="weightLog" className='start-card card-fx'>
+              <IconScaleOutline
+                size={170}
+                stroke={1}
+                className="start-card-bg"
+              />
+              <div className='text-div'>
+                <ArrowTrendingDownIcon className="text-div icon-xl" />
+              </div>
+              
+              <div className='text-div'>
+                <h2 className='text-div'>{t("start.weightLog")}</h2>
+                <span className='text-div'>{t("start.weightLogDesc")}</span>
+              </div>
+              <div className='text-div'>
+                <ArrowRightIcon className="text-div icon-sm" />
+              </div>
+              
             </Link>
 
             <Link to="exportImport" className='start-card card-fx'>

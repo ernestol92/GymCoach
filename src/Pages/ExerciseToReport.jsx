@@ -11,6 +11,7 @@ const ExerciseToReport = ({ mode }) => {
 
     const [exercises, setExercises] = useState([]);
 
+
     useEffect(() => {
         if(!group) return;
 
@@ -25,7 +26,6 @@ const ExerciseToReport = ({ mode }) => {
 
         //Get exercises
         const exercises = await db.exercises.bulkGet(exerciseIds);
-        
         const filteredExercises = exercises.filter(x => x !== undefined);
 
         setExercises(filteredExercises);

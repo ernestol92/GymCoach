@@ -26,7 +26,7 @@ const LowerBody = ({ mode }) => {
                                 }}>{t("keywords.quads")}</Link>
 
           <Link 
-            to="Hamstring" 
+            to="Hamstrings" 
             className="card card-fx"
             style={{
                                   backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/hamstring.png)`,
