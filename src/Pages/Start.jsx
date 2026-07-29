@@ -9,8 +9,8 @@ const Start = () => {
   const { t } = useTranslation()
 
   return (
-    <div className='container'>
-      <div className='start-page-column start-bg'>
+    <div className='transparent'>
+      <div className='start-page-column transparent'>
 
             <div className='banner mt'>
               <h1 className='start-title text-div transparent'>{t("welcome.title")}<span className='orbitron-font white-color transparent'>{t("welcome.title2")}</span></h1>
