@@ -64,6 +64,7 @@
   width: 100%;
   border-bottom: #444 solid 1px;
   position: relative;
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .Navbar-icons{
@@ -346,7 +347,8 @@
   bottom: 0;
   background-color: transparent;
   z-index: 99999;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-top: 8px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
 }
 
 .toolbar-button{
