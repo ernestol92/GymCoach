@@ -64,7 +64,7 @@
   width: 100%;
   border-bottom: #444 solid 1px;
   position: relative;
-  padding-top: env(safe-area-inset-top, 0px);
+  padding-top: calc(32px + env(safe-area-inset-top, 0px)) ;
 }
 
 .Navbar-icons{
