@@ -42,7 +42,7 @@
   width: 100%;
   max-width: 430px; 
   margin: 0 auto;   
-  height: 100vh;
+  height: 100dvh;
   background: #0f0f0f;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@
   width: 100%;
   border-bottom: #444 solid 1px;
   position: relative;
-  padding-top: calc(32px + env(safe-area-inset-top, 0px)) ;
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .Navbar-icons{
@@ -344,7 +344,7 @@
   width: 100%;
   max-width: 430px;
   position:sticky;
-  bottom: 0;
+  bottom: -1px;
   background-color: transparent;
   z-index: 99999;
   padding-top: 8px;

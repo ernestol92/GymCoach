@@ -13,7 +13,7 @@ const Toolbar = () => {
   return (
     <>
         
-      <div className='toolbar-wrapper bottomToolbar'>
+      <div className='toolbar-wrapper'>
           <button className='toolbar-button' onClick={handleClick}>
             {isOpen ? <ChevronDownIcon className='icon-sm footer-icon'/> : <ChevronUpIcon className='icon-md footer-icon'/>}
           </button>
