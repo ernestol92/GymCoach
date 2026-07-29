@@ -60,11 +60,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .8rem;
+  padding: 10px;
   width: 100%;
   border-bottom: #444 solid 1px;
   position: relative;
-  padding-top: env(safe-area-inset-top, 0px);
+  padding-top: calc(10px + env(safe-area-inset-top, 0px));
 }
 
 .Navbar-icons{
