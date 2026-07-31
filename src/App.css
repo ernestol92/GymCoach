@@ -35,8 +35,8 @@
   --title-color: #141414;
   --title-color-inverted: #ffffff;
   --bread-color: #222222;
-  --background-color: #cfcfcf; /*x*/
-  --border-color: #444;
+  --background-color: #b8bdb0; /*x*/
+  --border-color: #acacac;
   --gradient-cards: #cccccc;
   --talk-bubble-bg: #ffffff;
   --talk-bubble-color: #000000;
@@ -230,7 +230,7 @@
 }
 
 .start-subtitle{
-  color: var(--bread-color);
+  color: var(--background-color);
   font-size: 1.2rem;
 }
 
