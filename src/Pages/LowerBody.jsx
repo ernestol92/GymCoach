@@ -19,7 +19,7 @@ const LowerBody = ({ mode }) => {
             to="Quads" 
             className="card card-fx"
             style={{
-                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/quads.png)`,
+                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/quads.png)`,
                                   backgroundSize: "cover",
                                   backgroundPosition: "center"
             
@@ -29,7 +29,7 @@ const LowerBody = ({ mode }) => {
             to="Hamstrings" 
             className="card card-fx"
             style={{
-                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/hamstring.png)`,
+                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/hamstring.png)`,
                                   backgroundSize: "cover",
                                   backgroundPosition: "center"
             
@@ -39,7 +39,7 @@ const LowerBody = ({ mode }) => {
             to="Glutes" 
             className="card card-fx"
             style={{
-                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/glutes.png)`,
+                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/glutes.png)`,
                                   backgroundSize: "cover",
                                   backgroundPosition: "center"
             
@@ -49,7 +49,7 @@ const LowerBody = ({ mode }) => {
             to="Calves" 
             className="card card-fx"
             style={{
-                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/calves.png)`,
+                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/calves.png)`,
                                   backgroundSize: "cover",
                                   backgroundPosition: "center"
             

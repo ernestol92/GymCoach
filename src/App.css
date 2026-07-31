@@ -9,6 +9,7 @@
   font-weight: 500;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  color: white;
 }
 *::-webkit-scrollbar {
   display: none;
@@ -27,7 +28,10 @@
   --talk-bubble-color: #000000;
   --language-select: #131313;
   --number-input: #ffffff;
+  --background-image: url('/bg.jpg');
+  --opacity-bg: 0.06;
 }
+
 
 .light {
   --primary: #c1ff00;
@@ -35,13 +39,15 @@
   --title-color: #141414;
   --title-color-inverted: #ffffff;
   --bread-color: #222222;
-  --background-color: #b8bdb0; /*x*/
+  --background-color: #b7bbb0; /*x*/
   --border-color: #acacac;
   --gradient-cards: #cccccc;
   --talk-bubble-bg: #ffffff;
   --talk-bubble-color: #000000;
   --language-select: #131313;
   --number-input: #ffffff;
+  --background-image: url('/bg-white.jpg');
+  --opacity-bg: 0.15;
 }
 
 
@@ -155,7 +161,10 @@
   height: min-content;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: var(--title-color);
+  
 }
+
 
 /* .inspirationBtn{
   background-color: transparent;
@@ -185,7 +194,7 @@
 }
 
 .carbon-bg{
-  background-image: url('/bg.jpg');
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -258,7 +267,7 @@
   justify-content: space-between;
   align-items: start;
   background-color: var(--gradient-cards);
-  background: linear-gradient(to bottom right, #586b31, var(--gradient-cards) 55%);
+  background: linear-gradient(to bottom right, #586b31, var(--background-color) 45%);
   text-decoration: none;
   font-size: 1rem;
   border-radius: 1rem;
@@ -291,7 +300,7 @@
   stroke-width: .5px;
   right: -20px;
   bottom: -20px;
-  opacity: 0.06;
+  opacity: var(--opacity-bg);
   fill: transparent !important;
   stroke: var(--primary) !important;
 }
@@ -414,7 +423,7 @@
   border: 1px solid var(--border-color);
   font-size: 1.3rem;
   text-decoration: none;
-  color: var(--title-color-inverted);
+  color: var(--talk-bubble-color);
   
 }
 
@@ -449,12 +458,13 @@
 .exerciseListBtn{
   width: 100%;
   padding: 1rem;
-  background-color: var(--gradient-cards);
+  background-color: var(--background-color);
   font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
   border: 1px solid var(--border-color);
   border-radius: 1rem;
+  color: var(--bread-color);
 }
 .reportSet{
   display: flex;
@@ -488,7 +498,7 @@
   
   h3{
     background-color: transparent;
-    color: var(--title-color-inverted);
+    color: var(--talk-bubble-color);
     font-size: 1.8rem;
   }
 }
@@ -572,7 +582,7 @@
 
 .exerciseName{
   background-color: transparent;
-  color: white;
+  color: var(--title-color);
   font-size: 1.5rem;
   font-weight: 700;
   font-family: "Orbitron", sans-serif;

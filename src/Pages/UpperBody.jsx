@@ -19,7 +19,7 @@ const UpperBody = ({ mode }) => {
             to="Chest" 
             className="card card-fx"
             style={{
-                      backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/chest.png)`,
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/chest.png)`,
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
@@ -29,7 +29,7 @@ const UpperBody = ({ mode }) => {
             to="Back" 
             className="card card-fx"
             style={{
-                      backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/back.png)`,
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/back.png)`,
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
@@ -39,7 +39,7 @@ const UpperBody = ({ mode }) => {
             to="Shoulders" 
             className="card card-fx"
             style={{
-                      backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/shoulders.png)`,
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/shoulders.png)`,
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
@@ -49,7 +49,7 @@ const UpperBody = ({ mode }) => {
             to="Arms" 
             className="card card-fx"
             style={{
-                      backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/arms.png)`,
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/arms.png)`,
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
@@ -59,7 +59,7 @@ const UpperBody = ({ mode }) => {
             to="Core" 
             className="card card-fx"
             style={{
-                      backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${base}specificMuscle/core.png)`,
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}specificMuscle/core.png)`,
                       backgroundSize: "cover",
                       backgroundPosition: "center"
 
