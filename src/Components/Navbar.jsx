@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import { LanguageIcon, HomeIcon} from '@heroicons/react/24/solid';
+import { LanguageIcon, HomeIcon, SunIcon} from '@heroicons/react/24/solid';
 import { useState, useRef, useEffect, useMemo } from 'react'
 import i18n from '../i18n';
 import { useTranslation } from 'react-i18next';
@@ -53,6 +53,10 @@ const Navbar = () => {
   };
 }, [messages]);
 
+  const toggleTheme = () => {
+  document.documentElement.classList.toggle("light");
+  };
+
   useEffect(() => {
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -83,10 +87,10 @@ const Navbar = () => {
               )}
 
               <div className='Navbar-icons'>
-                {/* <Link to="/">
-                  <HomeIcon className='icon-md primary-color'></HomeIcon>
-                </Link> */}
-                <button to="/inspiration" onClick={handleClick} className='language-btn'>
+                <button className='language-btn' onClick={toggleTheme}>
+                  <SunIcon className='icon-md primary-color'></SunIcon>
+                </button>
+                <button onClick={handleClick} className='language-btn'>
                   <LanguageIcon className='icon-sm primary-color'></LanguageIcon>
                 </button>
               
