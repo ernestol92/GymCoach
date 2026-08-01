@@ -22,8 +22,7 @@ const ReportCategory = () => {
               style={{
                       backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url(${base}UpperBody.png)`,
                       backgroundSize: "cover",
-                      backgroundPosition: "center"
-
+                      backgroundPosition: "center",
                     }}>
                 {t('keywords.upperbody')}
             </Link>

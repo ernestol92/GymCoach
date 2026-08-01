@@ -17,9 +17,9 @@ const Layout = () => {
     <div className='wrapper'>
         <Navbar/>
         <main className={`content ${isHome ? 'start-bg' : 'carbon-bg'}`} >
-            <Outlet/>
-            <Toolbar/>
-            <Footer/>
+              <Outlet/>
+              <Toolbar/>
+              <Footer/>
         </main>
     </div>
   )

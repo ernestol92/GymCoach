@@ -75,12 +75,15 @@
   overflow: hidden;
 }
 .content {
-  flex: 1;
   overflow-y: auto;
   width: 100%;
+  height: 100%;
   min-height: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .header{
   display: flex;
@@ -228,6 +231,7 @@
 
 .transparent{
   background-color: transparent;
+  position: relative;
 }
 
 .start-title{
@@ -239,7 +243,7 @@
 }
 
 .start-subtitle{
-  color: var(--background-color);
+  color: var(--talk-bubble-bg);
   font-size: 1.2rem;
 }
 
@@ -267,7 +271,7 @@
   justify-content: space-between;
   align-items: start;
   background-color: var(--gradient-cards);
-  background: linear-gradient(to bottom right, #586b31, var(--background-color) 45%);
+  background: linear-gradient(to top right, rgba(170, 255, 0, 0.74), var(--background-color) 35%);
   text-decoration: none;
   font-size: 1rem;
   border-radius: 1rem;
@@ -346,6 +350,7 @@
   background-size: auto 1.5rem;
   background-repeat: no-repeat;
   background-position: right 1rem center;
+  color: var(--title-color);
 }
 
 .flex-col{
@@ -353,6 +358,10 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+.label{
+  color: var(--title-color);
 }
 
 .toolbar{
@@ -376,8 +385,8 @@
   flex-direction: column;
   width: 100%;
   max-width: 430px;
-  position:sticky;
-  bottom: -1px;
+  position: sticky;
+  bottom: 0px;
   background-color: transparent;
   z-index: 99999;
   padding-top: 8px;
@@ -414,6 +423,7 @@
   font-size: 1rem;
   border-radius: 8px;
   width: 100%;
+  border-color: var(--border-color);
 }
 
 .add-btn{
@@ -455,16 +465,21 @@
   align-items: center;
   justify-content: start;
 }
+
+.exerciseListText{
+  color: var(--title-color);
+}
+
 .exerciseListBtn{
   width: 100%;
   padding: 1rem;
-  background-color: var(--background-color);
+  background-color: var(--primary);
   font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
   border: 1px solid var(--border-color);
   border-radius: 1rem;
-  color: var(--bread-color);
+  color: var(--talk-bubble-color);
 }
 .reportSet{
   display: flex;
@@ -513,7 +528,7 @@
   background-color: var(--number-input);
   border-radius: 1rem;
   border: 1px solid var(--border-color);
-  color: var(--title-color-inverted);
+  color: var(--talk-bubble-color);
   padding: auto;
 }
 
@@ -693,7 +708,7 @@
   padding: 2rem 1rem;
   gap: 1rem;
   border-top: 1px solid var(--border-color);
-  
+  height: 100%;
 }
 
 .footer-icon{
