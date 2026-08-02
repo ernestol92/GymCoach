@@ -14,21 +14,21 @@ const GenericExercises = () => {
 
   return (
     <div className='p-2 transparent'>
-        <div className='List transparent'>
+        <div className='transparent glass-dark p-2 card-fx'>
 
             {defaultExercises.map((item)=>{
 
                 if(item.muscleKey){
                     return <h2 
                             key={item.muscleKey}
-                            className='mb mt transparent'>
+                            className='mb mt transparent exerciseListText'>
                                 {t(`exercises.${item.muscleKey}`)}
                             
                             </h2>
                 }
 
                 return (
-                    <p key={item.exerciseKey} className='transparent mb align-center'>
+                    <p key={item.exerciseKey} className='transparent mb align-center exerciseListText'>
                         <IconPoint
                             size={25}
                             stroke={1}
@@ -41,7 +41,7 @@ const GenericExercises = () => {
             }
 
         </div>
-        <button onClick={handleSeedExercises} className='exerciseListBtn mt3'>Add default exercises</button>
+        <button onClick={handleSeedExercises} className='exerciseListBtn genericListBtn mt3'>Add default exercises</button>
     </div>
   )
 }

@@ -486,12 +486,13 @@
   text-decoration: none;
   border: 1px solid var(--border-color);
   border-radius: 1rem;
-  color: var(--talk-bubble-color);
+  color: var(--title-color);
 }
 
 .genericListBtn{
   background-color: var(--primary);
   transition: 0.2s;
+  color: var(--talk-bubble-color);
 }
 
 .genericListBtn:hover{
@@ -1155,11 +1156,11 @@ li::marker {
   background-color: transparent;
   fill: none !important;
 
-  stroke-width: 1px;
+  stroke-width: 4px;
   right: -20px;
   bottom: -20px;
   fill: transparent !important;
-  stroke: #c1ff00 !important;
+  stroke: var(--primary) !important;
 }
 
 .relative{
