@@ -3,6 +3,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import Toolbar from '../Components/Toolbar';
 import Footer from '../Components/Footer';
+import ScrollToTop from '../Components/ScrollToTop';
 
 
 const Layout = () => {
@@ -15,8 +16,9 @@ const Layout = () => {
 
   return (
     <div className='wrapper'>
+        <ScrollToTop />
         <Navbar/>
-        <main className={`content ${isHome ? 'start-bg' : 'carbon-bg'}`} >
+        <main id="main-content" className={`content ${isHome ? 'start-bg' : 'carbon-bg'}`} >
               <Outlet/>
               <Toolbar/>
               <Footer/>

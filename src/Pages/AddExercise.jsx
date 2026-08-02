@@ -162,7 +162,7 @@ const handleAddExercise = async () => {
         <div className='start-card card-fx text-div mt3'>
           <h3 className='text-div exerciseListText'>Not sure what exercise to add?</h3>
           <p className='text-div exerciseListText'>Press the button below to see a generic exercise list which you can add</p>
-          <Link to="genericList" className='exerciseListBtn' >Exercise List </Link>
+          <Link to="genericList" className='exerciseListBtn genericListBtn' >Exercise List </Link>
         </div>
         
     </div>

@@ -37,7 +37,7 @@ const ExerciseToReport = ({ mode }) => {
     
   return (
     <>
-        <div className='start-page-column transparent'>
+        <div className='start-page-column transparent mb3'>
             <div className='transparent'>
                 <BackButton/>
                 <h2 className='breadCrumb transparent'>

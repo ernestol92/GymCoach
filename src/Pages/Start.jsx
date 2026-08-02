@@ -24,7 +24,7 @@ const Start = () => {
 
             <Link to="reportCategory" className='start-card card-fx'>
               <IconReport
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />
@@ -42,7 +42,7 @@ const Start = () => {
 
             <Link to="addExercise" className='start-card card-fx'>
               <IconClipboardPlus
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />
@@ -60,7 +60,7 @@ const Start = () => {
 
             <Link to="timer" className='start-card card-fx'>
               <IconTimeDuration15
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />
@@ -78,7 +78,7 @@ const Start = () => {
 
             <Link to="/library" className='start-card card-fx'>
               <IconCashEdit
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />
@@ -96,7 +96,7 @@ const Start = () => {
 
             <Link to="history" className='start-card card-fx'>
               <IconHistory
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />
@@ -114,7 +114,7 @@ const Start = () => {
 
             <Link to="weightLog" className='start-card card-fx'>
               <IconScaleOutline
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />
@@ -134,7 +134,7 @@ const Start = () => {
 
             <Link to="exportImport" className='start-card card-fx'>
               <IconDatabaseExport
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />
