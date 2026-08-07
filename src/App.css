@@ -389,7 +389,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
-  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   height: 80px;
 }
 
