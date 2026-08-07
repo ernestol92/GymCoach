@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Orbitron:wght@400..900&display=swap');
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
@@ -18,7 +32,7 @@
 :root{
   --primary: #c1ff00;
   --primary-hover: rgb(170, 226, 0);
-  --secondary: #ff9100;
+  --secondary: #ff5e00;
   --title-color: #ffffff;
   --title-color-inverted: #000000;
   --bread-color: #ADABAA;
@@ -36,7 +50,7 @@
 
 .light {
   --primary: #c1ff00;
-  --secondary: #ff9100;
+  --secondary: #ff5e00;
   --title-color: #141414;
   --title-color-inverted: #ffffff;
   --bread-color: #222222;
@@ -90,11 +104,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
   border-bottom: var(--border-color) solid 1px;
   position: relative;
-  padding-top: calc(10px + env(safe-area-inset-top, 0px));
+  padding-top: calc(12px + env(safe-area-inset-top, 0px));
 }
 
 .Navbar-icons{
@@ -1148,7 +1162,7 @@ li::marker {
 }
 
 .list-btn{
-  padding: 4px;
+  padding: 5px;
   border-radius: 8px;
 }
 
@@ -1259,3 +1273,5 @@ li::marker {
 .bread-color{
   color: var(--bread-color);
 }
+
+

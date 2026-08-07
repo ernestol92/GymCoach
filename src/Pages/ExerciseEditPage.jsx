@@ -98,11 +98,11 @@ const ExerciseEditPage = () => {
             
             {muscleGroups.map( group => (
                 <ul key={group.muscle} className='transparent'>
-                    <h3 className='transparent mb mt uppercase'>{group.muscle}</h3>
+                    <h3 className='transparent mb mt uppercase title-color'>{group.muscle}</h3>
                     {group.exercises.map(exercise => (
                         (exercise.isCustom ? 
                         (<li className='transparent li mb' key={exercise.id}>
-                            <div className='transparent li'>
+                            <div className='transparent li title-color'>
                                 <IconPoint
                                     size={25}
                                     stroke={1}
@@ -129,7 +129,7 @@ const ExerciseEditPage = () => {
                         )
                         : 
                         (<li className='transparent li mb' key={exercise.id}>
-                            <div className='transparent li'>
+                            <div className='transparent li title-color'>
                                 <IconPoint
                                     size={25}
                                     stroke={1.5}
@@ -138,7 +138,7 @@ const ExerciseEditPage = () => {
                                 {t(`exercises.${exercise.exerciseKey}`)}
                             </div>
                             
-                            <div className='flex'>
+                            <div className='flex transparent'>
                                 <button className='list-btn' onClick={() => toggleEditClick(exercise)}>
                                     <IconEdit
                                         size={20}
