@@ -390,7 +390,7 @@
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
-  height: 200px;
+  height: 100px;
   background-color: var(--background-color);
 }
 
