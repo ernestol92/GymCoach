@@ -392,6 +392,7 @@
   padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
   height: 100px;
   background-color: var(--background-color);
+  flex-shrink: 0;
 }
 
 .toolbar-wrapper{
@@ -406,6 +407,7 @@
   background-color: transparent;
   z-index: 99999;
   padding-bottom: env(safe-area-inset-bottom, 0px);
+  flex-shrink: 0;
 }
 
 .toolbar-button{
