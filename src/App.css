@@ -389,8 +389,8 @@
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  height: 80px;
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+  height: 100px;
   background-color: var(--background-color);
 }
 
@@ -405,7 +405,6 @@
   bottom: 0px;
   background-color: transparent;
   z-index: 99999;
-  padding-top: 8px;
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
