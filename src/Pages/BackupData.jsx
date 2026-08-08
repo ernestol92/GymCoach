@@ -19,6 +19,7 @@ const BackupData = () => {
       const muscles = await db.muscles.toArray()
       const exerciseMuscles = await db.exerciseMuscles.toArray()
       const history = await db.history.toArray()
+      const weightHistory = await db.weightHistory.toArray()
 
       const exportData = {
         exportedAt: new Date().toISOString(),
@@ -28,7 +29,8 @@ const BackupData = () => {
           exercises,
           muscles,
           exerciseMuscles,
-          history
+          history,
+          weightHistory
         }
       }
 
@@ -79,6 +81,7 @@ const BackupData = () => {
       const muscles = Array.isArray(parsed.data.muscles) ? parsed.data.muscles : []
       const exerciseMuscles = Array.isArray(parsed.data.exerciseMuscles) ? parsed.data.exerciseMuscles : []
       const history = Array.isArray(parsed.data.history) ? parsed.data.history : []
+      const weightHistory = Array.isArray(parsed.data.weightHistory) ? parsed.data.weightHistory : []
 
       await db.transaction(
         'rw',
@@ -86,16 +89,19 @@ const BackupData = () => {
         db.muscles,
         db.exerciseMuscles,
         db.history,
+        db.weightHistory,
         async () => {
           await db.history.clear()
           await db.exerciseMuscles.clear()
           await db.muscles.clear()
           await db.exercises.clear()
+          await db.weightHistory.clear()
 
           if (exercises.length) await db.exercises.bulkAdd(exercises)
           if (muscles.length) await db.muscles.bulkAdd(muscles)
           if (exerciseMuscles.length) await db.exerciseMuscles.bulkAdd(exerciseMuscles)
           if (history.length) await db.history.bulkAdd(history)
+          if (weightHistory.length) await db.weightHistory.bulkAdd(weightHistory)
         }
       )
 
