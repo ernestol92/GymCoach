@@ -41,7 +41,7 @@ body,
 :root{
   --primary: #c1ff00;
   --primary-hover: rgb(170, 226, 0);
-  --secondary: #ff5e00;
+  --secondary: #eb6213;
   --title-color: #ffffff;
   --title-color-inverted: #000000;
   --bread-color: #ADABAA;
@@ -59,7 +59,7 @@ body,
 
 .light {
   --primary: #c1ff00;
-  --secondary: #ff5e00;
+  --secondary: #eb6213;
   --title-color: #141414;
   --title-color-inverted: #ffffff;
   --bread-color: #222222;
@@ -374,6 +374,7 @@ body,
   background-size: auto 1.5rem;
   background-repeat: no-repeat;
   background-position: right 1rem center;
+  background-color: var(--background-color);
   color: var(--title-color);
 }
 
@@ -438,9 +439,10 @@ body,
 
 
 .backBtn{
-  border: none;
-  size: 1.5rem;
-  aspect-ratio: 1/1;
+  background-color: var(--secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: .5rem;
 }
 
 
@@ -450,6 +452,8 @@ body,
   border-radius: 8px;
   width: 100%;
   border-color: var(--border-color);
+  background-color: var(--background-color);
+  color: var(--title-color);
 }
 
 .add-btn{

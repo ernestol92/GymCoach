@@ -12,7 +12,7 @@ const BackButton = () => {
   return (
     <div className='transparent'>
       <button
-        className='back-button' 
+        className='backBtn' 
         onClick={handleBack} 
         style={{ 
             width: '45px',

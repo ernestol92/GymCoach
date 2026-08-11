@@ -164,8 +164,19 @@ const WeightLog = () => {
                 <label className='transparent' htmlFor="trackWeight14">14D</label>
             </div>
             <LineChart className="weight-chart" data={filteredWeightData} style={{padding: '10px', width: '100%', aspectRatio: 1, maxWidth: 600, background: 'transparent' }}>
-                <Tooltip />
-                {/* <CartesianGrid className="transparent" strokeDasharray="2 5" style={{ background: 'transparent' }} /> */}
+                <Tooltip contentStyle={{
+                        backgroundColor: 'var(--background-color)',
+                        border: '1px solid var(--border-color)',
+                        borderRadius: '8px',
+                        }}
+                        labelStyle={{
+                            color: 'var(--title-color)',
+                        }}
+                        itemStyle={{
+                            color: 'var(--primary)',
+                        }}
+                />
+                
                 <XAxis dataKey="date" />
                 <YAxis domain={['dataMin - 5', 'dataMax + 5']} />
                 <Line dataKey="weight" stroke="#c1ff00" strokeWidth={3} dot={{ stroke: '#c1ff00', strokeWidth: 2, r: 4 }} />
