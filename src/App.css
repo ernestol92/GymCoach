@@ -1288,8 +1288,8 @@ li::marker {
 }
 
 
-/* @media (display-mode: standalone) {
+@media (display-mode: standalone) {
   .toolbar-wrapper {
     padding-bottom: 0px;
   }
-} */
+}
