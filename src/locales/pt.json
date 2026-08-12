@@ -9,8 +9,8 @@
     "report": "Registrar",
     "reportDesc": "Registre o exercício que você está fazendo agora",
 
-    "addExercise": "Adicionar exercício",
-    "addExerciseDesc": "Adicione um novo exercício ao seu catálogo",
+    "add": "Adicionar",
+    "addDesc": "Adicione um novo exercício ao seu catálogo de exercícios ou crie programas de treino",
 
     "timer": "Timer",
     "timerDesc": "Defina um timer para seu treino",
@@ -52,6 +52,20 @@
     "calves": "Panturrilhas",
     "glutes": "Glúteos"
     },
+
+    "addAlternatives": {
+    "addExercise": "Adicionar exercício",
+    "addExerciseDesc": "Adicione um novo exercício à sua biblioteca de exercícios ou adicione uma lista de exercícios padrão",
+    "addProgram": "Adicionar programa",
+    "addProgramDesc": "Crie um novo programa de treino personalizado"
+    },
+
+  "exerciseHelp": {
+    "title": "Não sabe qual exercício adicionar?",
+    "desc": "Pressione o botão abaixo para ver uma lista de exercícios que você pode adicionar.",
+    "list": "Lista de Exercícios",
+    "addDefault": "Adicionar exercícios padrão"
+  },
 
   "group": {
     "reportTitle": "Registre seus exercícios de {{group}}",

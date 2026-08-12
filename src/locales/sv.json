@@ -9,8 +9,8 @@
     "report": "Registrera",
     "reportDesc": "Logga den övning du utför just nu",
 
-    "addExercise": "Lägg till övning",
-    "addExerciseDesc": "Lägg till en ny övning i din träningslista",
+    "add": "Lägg till",
+    "addDesc": "Lägg till en ny övning i ditt träningsbibliotek eller skapa träningsprogram",
 
     "timer": "Timer",
     "timerDesc": "Sätt en timer för din träning",
@@ -52,6 +52,20 @@
     "calves": "Vader",
     "glutes": "Säte"
     },
+
+    "addAlternatives":{
+      "addExercise": "Lägg till övning",
+      "addExerciseDesc": "Lägg till en ny övning i ditt träningsbibliotek eller lägg till en lista med standardövningar",
+      "addProgram": "Lägg till program",
+      "addProgramDesc": "Skapa ett nytt anpassat träningsprogram"
+    },
+
+  "exerciseHelp": {
+    "title": "Osäker på vilken övning du ska lägga till?",
+    "desc": "Tryck på knappen nedan för att se en lista över övningar som du kan lägga till.",
+    "list": "Övningslista",
+    "addDefault": "Lägg till standardövningar"
+  },
 
   "group": {
     "reportTitle": "Registrera dina {{group}}-övningar",

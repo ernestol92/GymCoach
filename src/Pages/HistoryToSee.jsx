@@ -14,7 +14,7 @@ const HistoryToSee = () => {
 
           <Link to="exerciseHistory" className='start-card card-fx'>
               <IconBarbell
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />
@@ -30,7 +30,7 @@ const HistoryToSee = () => {
 
             <Link to="workoutHistory" className='start-card card-fx'>
               <IconTimeDuration60
-                size={170}
+                size={140}
                 stroke={1}
                 className="start-card-bg"
               />

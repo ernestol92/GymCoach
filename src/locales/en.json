@@ -10,8 +10,8 @@
     "report": "Report",
     "reportDesc": "Log the current exercise you are performing",
 
-    "addExercise": "Add Exercise",
-    "addExerciseDesc": "Add a new exercise to your workout catalog",
+    "add": "Add",
+    "addDesc": "Add a new exercise to your workout catalog or create workout programs",
 
     "timer": "Timer",
     "timerDesc": "Set a timer for your exercise",
@@ -56,6 +56,20 @@
     "hamstrings": "Hamstrings",
     "calves": "Calves",
     "glutes": "Glutes"
+  },
+
+  "addAlternatives": {
+  "addExercise": "Add Exercise",
+  "addExerciseDesc": "Add a new exercise to your exercise library or add a list of standard exercises",
+  "addProgram": "Add Program",
+  "addProgramDesc": "Create a new custom workout program"
+  },
+
+  "exerciseHelp": {
+    "title": "Not sure which exercise to add?",
+    "desc": "Press the button below to browse a list of exercises you can add.",
+    "list": "Exercise List",
+    "addDefault": "Add default exercises"
   },
 
   "group": {

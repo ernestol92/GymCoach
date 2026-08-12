@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { db } from "../db/db.js";
 import { Link, useNavigate } from 'react-router-dom';
-import BackButton from '../Components/BackButton';
+import BackButton from '../Components/BackButton.jsx';
 import { useTranslation } from 'react-i18next'
 import { createExerciseKey } from '../helpers/createExerciseKey.jsx'
 
@@ -125,7 +125,7 @@ const handleAddExercise = async () => {
 
         {category === "cardio" && (
           <div className='flex-col transparent'>
-            <label htmlFor="">{t('exerciseName')}:</label>
+            <label  htmlFor="">{t('exerciseName')}:</label>
             <input 
               className='input' 
               type="text" 
@@ -160,9 +160,9 @@ const handleAddExercise = async () => {
         <small className='text-center transparent exerciseListText'>OR</small>
 
         <div className='start-card card-fx text-div mt3'>
-          <h3 className='text-div exerciseListText'>Not sure what exercise to add?</h3>
-          <p className='text-div exerciseListText'>Press the button below to see a generic exercise list which you can add</p>
-          <Link to="genericList" className='exerciseListBtn genericListBtn' >Exercise List </Link>
+          <h3 className='text-div exerciseListText'>{t('exerciseHelp.title')}</h3>
+          <p className='text-div exerciseListText'>{t('exerciseHelp.desc')}</p>
+          <Link to="genericList" className='exerciseListBtn genericListBtn' >{t('exerciseHelp.list')} </Link>
         </div>
         
     </div>

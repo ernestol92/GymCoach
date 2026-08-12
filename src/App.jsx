@@ -6,7 +6,7 @@ import Start from './Pages/Start';
 import ReportCategory from './Pages/ReportCategory';
 import UpperBody from './Pages/UpperBody';
 import LowerBody from './Pages/LowerBody';
-import AddExercise from './Pages/AddExercise';
+import AddPage from './Pages/AddPage';
 import Timer from './Pages/Timer';
 import { seedMuscles } from './db/db';
 import ExerciseToReport from './Pages/ExerciseToReport';
@@ -21,6 +21,8 @@ import BackupData from './Pages/BackupData';
 import GenericExercises from './Pages/GenericExercises';
 import ExerciseEditPage from './Pages/ExerciseEditPage';
 import WeightLog from './Pages/WeightLog';
+import AddExercise from './Components/AddExercise';
+import AddProgram from './Components/AddProgram';
 
 const App = () => {
 
@@ -46,8 +48,10 @@ const App = () => {
         <Route path='/reportCategory/:group/:exercise' element={<ReportCardio/>}></Route>
         
         {/* Adding exercises */}
-        <Route path='/addExercise' element={<AddExercise />}></Route>
-        <Route path='/addExercise/genericList' element={<GenericExercises/>}></Route>
+        <Route path='/add' element={<AddPage />}></Route>
+        <Route path='/add/addExercise' element={<AddExercise />}></Route>
+        <Route path='/add/addProgram' element={<AddProgram/>}></Route>
+        <Route path='/add/addExercise/genericList' element={<GenericExercises/>}></Route>
         {/* Timer */}
         <Route path='/timer'element={<Timer />}></Route>
 

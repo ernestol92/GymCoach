@@ -29,7 +29,7 @@ const Start = () => {
                 className="start-card-bg"
               />
               <div className='text-div'>
-                <ChartBarSquareIcon className="text-div icon-xl" />
+                <ChartBarSquareIcon className="text-div icon-lg" />
               </div>
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.report")}</h2>
@@ -40,18 +40,18 @@ const Start = () => {
               </div>
             </Link>
 
-            <Link to="addExercise" className='start-card card-fx'>
+            <Link to="add" className='start-card card-fx'>
               <IconClipboardPlus
                 size={140}
                 stroke={1}
                 className="start-card-bg"
               />
               <div className='text-div'>
-                <PlusCircleIcon className="text-div icon-xl" />
+                <PlusCircleIcon className="text-div icon-lg" />
               </div>
               <div className='text-div'>
-                <h2 className='text-div'>{t("start.addExercise")}</h2>
-                <span className='text-div'>{t("start.addExerciseDesc")}</span>
+                <h2 className='text-div'>{t("start.add")}</h2>
+                <span className='text-div'>{t("start.addDesc")}</span>
               </div>
               <div className='text-div'>
                 <ArrowRightIcon className="text-div icon-sm" />
@@ -65,7 +65,7 @@ const Start = () => {
                 className="start-card-bg"
               />
               <div className='text-div'>
-                <ClockIcon className="text-div icon-xl" />
+                <ClockIcon className="text-div icon-lg" />
                 </div>
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.timer")}</h2>
@@ -83,7 +83,7 @@ const Start = () => {
                 className="start-card-bg"
               />
               <div className='text-div'>
-                <RectangleStackIcon className="text-div icon-xl" />
+                <RectangleStackIcon className="text-div icon-lg" />
                 </div>
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.library")}</h2>
@@ -101,7 +101,7 @@ const Start = () => {
                 className="start-card-bg"
               />
               <div className='text-div'>
-                <ArrowPathRoundedSquareIcon className="text-div icon-xl" />
+                <ArrowPathRoundedSquareIcon className="text-div icon-lg" />
               </div>
               <div className='text-div'>
                 <h2 className='text-div'>{t("start.history")}</h2>
@@ -119,7 +119,7 @@ const Start = () => {
                 className="start-card-bg"
               />
               <div className='text-div'>
-                <ArrowTrendingDownIcon className="text-div icon-xl" />
+                <ArrowTrendingDownIcon className="text-div icon-lg" />
               </div>
               
               <div className='text-div'>
@@ -139,7 +139,7 @@ const Start = () => {
                 className="start-card-bg"
               />
               <div className='text-div'>
-                <ArrowUpOnSquareIcon className="text-div icon-xl" />
+                <ArrowUpOnSquareIcon className="text-div icon-lg" />
               </div>
               
               <div className='text-div'>
