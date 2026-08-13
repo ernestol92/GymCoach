@@ -16,7 +16,7 @@
     "timerDesc": "Sätt en timer för din träning",
 
     "library": "Övningar",
-    "libraryDesc": "Hantera alla dina sparade övningar",
+    "libraryDesc": "Hantera alla dina övningar och program",
 
     "history": "Historik",
     "historyDesc": "Se din träningshistorik",
@@ -51,14 +51,23 @@
     "hamstrings": "Baksida lår",
     "calves": "Vader",
     "glutes": "Säte"
-    },
+  },
 
-    "addAlternatives":{
-      "addExercise": "Lägg till övning",
-      "addExerciseDesc": "Lägg till en ny övning i ditt träningsbibliotek eller lägg till en lista med standardövningar",
-      "addProgram": "Lägg till program",
-      "addProgramDesc": "Skapa ett nytt anpassat träningsprogram"
-    },
+  "reportAlternatives": {
+    "reportExercise": "Registrera övning",
+    "reportExerciseDesc": "Registrera en övning som du har utfört",
+    "reportProgram": "Registrera program",
+    "reportProgramDesc": "Registrera ett träningsprogram"
+  },
+
+  "addAlternatives": {
+    "addExercise": "Lägg till övning",
+    "addExerciseDesc": "Lägg till en ny övning i ditt träningsbibliotek eller lägg till en lista med standardövningar",
+    "addProgram": "Lägg till program",
+    "addProgramDesc": "Skapa ett nytt anpassat träningsprogram",
+    "createProgram": "Skapa program",
+    "programName": "Programnamn"
+  },
 
   "exerciseHelp": {
     "title": "Osäker på vilken övning du ska lägga till?",
@@ -71,19 +80,19 @@
     "reportTitle": "Registrera dina {{group}}-övningar",
     "historyTitle": "Historik för {{group}}-övningar",
     "notFound": "Inga övningar hittades för denna muskelgrupp"
-    },
-  
+  },
+
   "lastTime": {
     "title": "Senast",
     "never": "Aldrig",
     "noData": "Ingen data"
-    },
+  },
 
   "reportexercise": {
     "addSet": "+ Set",
     "save": "Spara",
     "setsReported": "set registrerade"
-    },
+  },
 
   "createExerciseBtn": "Skapa övning",
 
@@ -126,7 +135,7 @@
     "totalRepTime": "Reps / Tid",
     "totalWeightDistance": "Vikt / Distans",
     "noData": "Ingen data att visa"
-    },
+  },
 
   "backupData": {
     "title": "Backup",
@@ -140,5 +149,5 @@
     "exportFailed": "Något gick fel när din data skulle exporteras.",
     "importSuccess": "Importen slutfördes.",
     "importFailed": "Importen misslyckades. Kontrollera att filen är en giltig backup."
-    }
+  }
 }

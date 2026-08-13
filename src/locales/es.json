@@ -16,7 +16,7 @@
     "timerDesc": "Configura un temporizador para tu entrenamiento",
 
     "library": "Ejercicios",
-    "libraryDesc": "Administra todos tus ejercicios",
+    "libraryDesc": "Administra todos tus ejercicios y programas",
 
     "history": "Historial",
     "historyDesc": "Consulta tu historial de entrenamientos",
@@ -51,14 +51,23 @@
     "hamstrings": "Isquiotibiales",
     "calves": "Pantorrillas",
     "glutes": "Glúteos"
-    },
+  },
 
-    "addAlternatives": {
+  "reportAlternatives": {
+    "reportExercise": "Registrar ejercicio",
+    "reportExerciseDesc": "Registra un ejercicio que hayas realizado",
+    "reportProgram": "Registrar programa",
+    "reportProgramDesc": "Registra un programa de entrenamiento"
+  },
+
+  "addAlternatives": {
     "addExercise": "Añadir ejercicio",
     "addExerciseDesc": "Añade un nuevo ejercicio a tu biblioteca de ejercicios o añade una lista de ejercicios estándar",
     "addProgram": "Añadir programa",
-    "addProgramDesc": "Crea un nuevo programa de entrenamiento personalizado"
-    },
+    "addProgramDesc": "Crea un nuevo programa de entrenamiento personalizado",
+    "createProgram": "Crear programa",
+    "programName": "Nombre del programa"
+  },
 
   "exerciseHelp": {
     "title": "¿No sabes qué ejercicio añadir?",
@@ -71,19 +80,19 @@
     "reportTitle": "Registra tus ejercicios de {{group}}",
     "historyTitle": "Historial de ejercicios de {{group}}",
     "notFound": "No se encontraron ejercicios para este grupo muscular"
-    },
+  },
 
   "lastTime": {
     "title": "Última vez",
     "never": "Nunca",
     "noData": "Sin datos"
-    },
+  },
 
   "reportexercise": {
     "addSet": "+ Serie",
     "save": "Guardar",
     "setsReported": "series registradas"
-    },
+  },
 
   "createExerciseBtn": "Crear ejercicio",
 
@@ -126,9 +135,9 @@
     "totalRepTime": "Repeticiones / Tiempo",
     "totalWeightDistance": "Peso / Distancia",
     "noData": "No hay datos de entrenamiento disponibles"
-    },
+  },
 
- "backupData": {
+  "backupData": {
     "title": "Respaldo",
     "description": "Exporta tus datos locales de entrenamiento a un archivo o importa una copia de seguridad anterior.",
     "export": "Exportar",
@@ -140,5 +149,5 @@
     "exportFailed": "Algo salió mal al exportar tus datos.",
     "importSuccess": "Importación completada con éxito.",
     "importFailed": "La importación falló. Verifica que el archivo sea un respaldo válido."
-    }
+  }
 }

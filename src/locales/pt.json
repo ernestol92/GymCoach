@@ -16,7 +16,7 @@
     "timerDesc": "Defina um timer para seu treino",
 
     "library": "Exercícios",
-    "libraryDesc": "Gerencie todos os seus exercícios cadastrados",
+    "libraryDesc": "Gerencie todos os seus exercícios e programas",
 
     "history": "Histórico",
     "historyDesc": "Veja seu histórico de treinos",
@@ -51,14 +51,23 @@
     "hamstrings": "Posterior de coxa",
     "calves": "Panturrilhas",
     "glutes": "Glúteos"
-    },
+  },
 
-    "addAlternatives": {
+  "reportAlternatives": {
+    "reportExercise": "Registrar exercício",
+    "reportExerciseDesc": "Registre um exercício que você realizou",
+    "reportProgram": "Registrar programa",
+    "reportProgramDesc": "Registre um programa de treino"
+  },
+
+  "addAlternatives": {
     "addExercise": "Adicionar exercício",
     "addExerciseDesc": "Adicione um novo exercício à sua biblioteca de exercícios ou adicione uma lista de exercícios padrão",
     "addProgram": "Adicionar programa",
-    "addProgramDesc": "Crie um novo programa de treino personalizado"
-    },
+    "addProgramDesc": "Crie um novo programa de treino personalizado",
+    "createProgram": "Criar programa",
+    "programName": "Nome do programa"
+  },
 
   "exerciseHelp": {
     "title": "Não sabe qual exercício adicionar?",
@@ -71,13 +80,13 @@
     "reportTitle": "Registre seus exercícios de {{group}}",
     "historyTitle": "Histórico de exercícios de {{group}}",
     "notFound": "Nenhum exercício encontrado para este grupo muscular"
-    },
+  },
 
   "lastTime": {
     "title": "Última vez",
     "never": "Nunca",
     "noData": "Sem dados"
-    },
+  },
 
   "reportexercise": {
     "addSet": "+ Série",
@@ -126,7 +135,7 @@
     "totalRepTime": "Repetições / Tempo",
     "totalWeightDistance": "Peso / Distância",
     "noData": "Nenhum dado de treino encontrado"
-    },
+  },
 
   "backupData": {
     "title": "Backup",
@@ -140,5 +149,5 @@
     "exportFailed": "Algo deu errado ao exportar seus dados.",
     "importSuccess": "Importação concluída com sucesso.",
     "importFailed": "A importação falhou. Verifique se o arquivo é um backup válido."
-    }
+  }
 }

@@ -1,5 +1,4 @@
 {
-
   "welcome": {
     "title": "Ready to",
     "title2": "crush it?",
@@ -17,7 +16,7 @@
     "timerDesc": "Set a timer for your exercise",
 
     "library": "Library",
-    "libraryDesc": "Handle all your existing exercises",
+    "libraryDesc": "Handle all your exercises and programs",
 
     "history": "History",
     "historyDesc": "View your workout history",
@@ -41,10 +40,9 @@
     "upperbody": "Upper Body",
     "lowerbody": "Lower Body",
     "cardio": "Cardio",
-    
+
     "report": "Report",
     "history": "History",
-
 
     "chest": "Chest",
     "back": "Back",
@@ -58,11 +56,20 @@
     "glutes": "Glutes"
   },
 
+  "reportAlternatives": {
+    "reportExercise": "Report Exercise",
+    "reportExerciseDesc": "Log an exercise you have performed",
+    "reportProgram": "Report Program",
+    "reportProgramDesc": "Log a workout program"
+  },
+
   "addAlternatives": {
-  "addExercise": "Add Exercise",
-  "addExerciseDesc": "Add a new exercise to your exercise library or add a list of standard exercises",
-  "addProgram": "Add Program",
-  "addProgramDesc": "Create a new custom workout program"
+    "addExercise": "Add Exercise",
+    "addExerciseDesc": "Add a new exercise to your exercise library or add a list of standard exercises",
+    "addProgram": "Add Program",
+    "addProgramDesc": "Create a new custom workout program",
+    "createProgram": "Create Program",
+    "programName": "Program Name"
   },
 
   "exerciseHelp": {
@@ -81,16 +88,16 @@
     "title": "Last time",
     "never": "Never",
     "noData": "No data"
-    },
+  },
 
   "reportexercise": {
     "setsReported": "sets reported",
-    "addSet":"+ Set",
+    "addSet": "+ Set",
     "save": "Save"
-    },
+  },
 
   "createExerciseBtn": "Create Exercise",
-  
+
   "reportCardio": {
     "interval": "Interval",
     "distance": "Distance (km)",
@@ -112,6 +119,13 @@
     "reset": "Reset"
   },
 
+  "library": {
+    "editExercise": "Edit Exercise",
+    "editExerciseDesc": "Edit an existing exercise in your library or delete it",
+    "editProgram": "Edit Program",
+    "editProgramDesc": "Edit an existing program in your library or delete it"
+  },
+
   "historyToSee": {
     "exerciseHistory": "Exercise History",
     "workoutHistory": "Workout History"
@@ -130,7 +144,7 @@
     "totalRepTime": "Reps / Time",
     "totalWeightDistance": "Weight / Distance",
     "noData": "No workout data available"
-    },
+  },
 
   "backupData": {
     "title": "Backup",
@@ -144,62 +158,60 @@
     "exportFailed": "Something went wrong while exporting your data.",
     "importSuccess": "Import completed successfully.",
     "importFailed": "Import failed. Please check that the file is a valid backup."
-    },
+  },
 
   "coach": {
-  "messages": [
-    "Ready to crush it?",
-    "Let's get this over with.",
-    "No excuses today.",
-    "Stay focused.",
-    "Small steps. Big results.",
-    "You're stronger than yesterday.",
-    "Discipline beats motivation.",
-    "Progress starts now.",
-    "You got this!",
-    "Don't skip leg day.",
-    "Make the next set count.",
-    "Rest. Then attack.",
-    "Your future self approves.",
-    "Consistency wins.",
-    "Pain is temporary.",
-    "Train smart. Train hard.",
-    "Weights don't lift themselves.",
-    "Keep moving.",
-    "Finish strong!",
-    "The hardest set is the first.",
-    "Earn your protein shake.",
-    "You're here. That's half the battle.",
-    "Less scrolling. More squatting.",
-    "You're paying for the gym.",
-    "Lift first. Flex later.",
-    "Save the drama. Lift.",
-    "Still alive? Good.",
-    "That's enough resting, superstar.",
-    "Rest time is over. Sorry.",
-    "Rise and shine princess."
-    
-  ],
-  "setCompleted": [
-    "Again.",
-    "Nice... now do another.",
-    "Good set.",
-    "Clean work.",
-    "That counts.",
-    "One set closer.",
-    "Keep the pressure on.",
-    "Solid effort.",
-    "Now breathe.",
-    "Rest. Then repeat.",
-    "Stack the sets.",
-    "Good. Don’t stop now.",
-    "Next one matters.",
-    "Strong work.",
-    "Set logged. Keep going.",
-    "Progress recorded.",
-    "Another brick laid.",
-    "Still got more in you."
-  ]
-}
-  
+    "messages": [
+      "Ready to crush it?",
+      "Let's get this over with.",
+      "No excuses today.",
+      "Stay focused.",
+      "Small steps. Big results.",
+      "You're stronger than yesterday.",
+      "Discipline beats motivation.",
+      "Progress starts now.",
+      "You got this!",
+      "Don't skip leg day.",
+      "Make the next set count.",
+      "Rest. Then attack.",
+      "Your future self approves.",
+      "Consistency wins.",
+      "Pain is temporary.",
+      "Train smart. Train hard.",
+      "Weights don't lift themselves.",
+      "Keep moving.",
+      "Finish strong!",
+      "The hardest set is the first.",
+      "Earn your protein shake.",
+      "You're here. That's half the battle.",
+      "Less scrolling. More squatting.",
+      "You're paying for the gym.",
+      "Lift first. Flex later.",
+      "Save the drama. Lift.",
+      "Still alive? Good.",
+      "That's enough resting, superstar.",
+      "Rest time is over. Sorry.",
+      "Rise and shine princess."
+    ],
+    "setCompleted": [
+      "Again.",
+      "Nice... now do another.",
+      "Good set.",
+      "Clean work.",
+      "That counts.",
+      "One set closer.",
+      "Keep the pressure on.",
+      "Solid effort.",
+      "Now breathe.",
+      "Rest. Then repeat.",
+      "Stack the sets.",
+      "Good. Don’t stop now.",
+      "Next one matters.",
+      "Strong work.",
+      "Set logged. Keep going.",
+      "Progress recorded.",
+      "Another brick laid.",
+      "Still got more in you."
+    ]
+  }
 }
