@@ -60,6 +60,33 @@ const AddProgram = () => {
     setProgramName(e.target.value);
   }
 
+  const handleSaveProgram = async () => {
+    if (programName.trim() === "") {
+      alert("Please enter a program name.");
+      return;
+    } else if (selectedExercises.length === 0) {
+      alert("Please select at least one exercise.");
+      return;
+    } else {
+        await db.programs.add({
+          programName: programName,
+          createdAt: Date.now()
+        })
+        await db.programExercises.bulkPut(
+          selectedExercises.map((exerciseId, index) => ({
+            program_id: programName,
+            exercise_id: exerciseId,
+            order: index + 1
+          }))
+        );
+
+      // Optionally reset form
+      setProgramName('');
+      setSelectedExercises([]);
+      alert('Program saved');
+    }
+  };
+
   return (
     <div className='start-page-column transparent relative'>
         <div className='transparent'>
@@ -70,7 +97,7 @@ const AddProgram = () => {
         </div>
 
         <div className='flex-col transparent mt2 mb2'>
-          <label htmlFor="programName">Program Name</label>
+          <label className='label' htmlFor="programName">Program Name</label>
           <input type="text" id="programName" name="programName" placeholder={t('programHelp.programName')} className='transparent input' value={programName} onChange={handleProgramNameChange} />
         </div>
 
@@ -120,7 +147,12 @@ const AddProgram = () => {
             ))}
             
         </div>
-
+        
+        <div>
+          <button className='btn mt2 mb2' onClick={handleSaveProgram}>
+            Save Program
+          </button>
+        </div>
 
     </div>
   )

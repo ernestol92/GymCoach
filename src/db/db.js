@@ -2,12 +2,14 @@ import Dexie from "dexie";
 
 export const db = new Dexie("gymApp")
 //kom ih[g att ändra versionen]
-db.version(7).stores({
+db.version(8).stores({
     exercises: "++id, &exerciseKey, exercise, isCustom",
     muscles: "++id, &muscle, muscleRegion",
     exerciseMuscles: "++id, exercise_id, muscle_id",
     history: "++id, session_id, exercise_id, date, sets, reps, weight, duration, distance, [exercise_id+date]",
-    weightHistory: "++id, &date, weight"
+    weightHistory: "++id, &date, weight",
+    programs: "++id, &programName, createdAt",
+    programExercises: "++id, program_id, exercise_id, order",
 })
 
 export const seedMuscles = async () => {
