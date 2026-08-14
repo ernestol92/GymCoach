@@ -181,8 +181,9 @@ body,
   justify-content: center;
   height: min-content;
   margin-top: 1rem;
-  margin-bottom: 1rem;
   color: var(--title-color);
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
 }
 
 /* .inspirationBtn{
@@ -201,7 +202,7 @@ body,
   width: 100%;
   max-width: 430px;
   padding: 2rem;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-direction: column;
   justify-content: start;
 }
@@ -490,9 +491,10 @@ body,
   display: flex;
   height: inherit;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-content: start;
+  margin-bottom: 1rem;
 }
 
 .exerciseListText {
@@ -556,7 +558,7 @@ body,
   h3 {
     background-color: transparent;
     color: var(--talk-bubble-color);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -564,8 +566,8 @@ body,
   width: 80%;
 }
 .numberInput {
-  width: 20%;
-  padding: 1rem;
+  width: 25%;
+  padding: 0.7rem;
   font-size: 1rem;
   background-color: var(--number-input);
   border-radius: 1rem;
@@ -576,7 +578,8 @@ body,
 
 .subAddBtn {
   width: 20%;
-  padding: 1rem;
+  aspect-ratio: 1/1;
+  padding: 0.7rem;
   font-size: 1rem;
   background-color: var(--primary);
   border-radius: 1rem;
@@ -637,6 +640,8 @@ body,
 }
 
 .exerciseName {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   color: var(--title-color);
   font-size: 1.5rem;
@@ -644,6 +649,7 @@ body,
   font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   text-align: center;
+  height: 60px;
 }
 
 .lastTime {
@@ -1330,4 +1336,22 @@ input[type="checkbox"]:checked::after {
   font-weight: 700;
 }
 
-/* ai gen carousel */
+.swiper-pagination {
+  bottom: 10px !important;
+  gap: 1rem !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 10px !important;
+  opacity: 1 !important;
+  background: var(--border-color) !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 1 !important;
+  background: var(--primary) !important;
+}

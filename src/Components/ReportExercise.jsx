@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { db } from "../db/db";
 import LastTime from "./LastTime";
 import BackButton from "../Components/BackButton";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 
-const ReportExercise = ({ exerciseData }) => {
-  const navigate = useNavigate();
+const ReportExercise = ({ exerciseData, onReportSaved }) => {
   const { t } = useTranslation();
   const { exercise } = useParams();
   const [reps, setReps] = useState(0);
@@ -16,20 +14,27 @@ const ReportExercise = ({ exerciseData }) => {
   const [sets, setSets] = useState([]);
   const [exercise_id, setExercise_id] = useState(null);
   const [exerciseName, setExerciseName] = useState("");
+  const [reportSaved, setReportSaved] = useState(false);
 
   useEffect(() => {
-    const fetchExerciseId = async () => {
-      const row = await db.exercises
-        .where("exerciseKey")
-        .equalsIgnoreCase(exercise)
-        .first();
+    if (exerciseData) {
+      setExercise_id(exerciseData.id);
+      setExerciseName(
+        exerciseData.exercise || t(`exercises.${exerciseData?.exerciseKey}`),
+      );
+    } else {
+      const fetchExerciseId = async () => {
+        const row = await db.exercises
+          .where("exerciseKey")
+          .equalsIgnoreCase(exercise)
+          .first();
 
-      setExercise_id(row?.id ?? null);
-      setExerciseName(row?.exercise || t(`exercises.${row?.exerciseKey}`));
-    };
-
-    fetchExerciseId();
-  }, [exercise]);
+        setExercise_id(row?.id ?? null);
+        setExerciseName(row?.exercise || t(`exercises.${row?.exerciseKey}`));
+      };
+      fetchExerciseId();
+    }
+  }, [exercise, exerciseData]);
 
   const handleDecreaseReps = () => {
     setReps((prev) => Math.max(0, prev - 1));
@@ -63,16 +68,12 @@ const ReportExercise = ({ exerciseData }) => {
   const handleSaveReport = async () => {
     const allSets = commitCurrentSet();
     if (allSets.length === 0) return;
-    const exerciseRow = await db.exercises
-      .where("exerciseKey")
-      .equalsIgnoreCase(exercise)
-      .first();
-    if (!exerciseRow) return console.error("Exercise not found");
+
     const sessionId = crypto.randomUUID();
     const now = new Date();
-
+    if (!exercise_id) return;
     const reportEntries = allSets.map((set) => ({
-      exercise_id: exerciseRow.id,
+      exercise_id: exercise_id,
       session_id: sessionId,
       date: now,
       sets: allSets.length,
@@ -83,10 +84,11 @@ const ReportExercise = ({ exerciseData }) => {
     }));
 
     await db.history.bulkAdd(reportEntries);
+    setReportSaved((prev) => !prev);
     setSets([]);
     setReps(0);
     setWeight(0);
-    navigate("/");
+    onReportSaved?.();
   };
 
   return (
@@ -94,13 +96,13 @@ const ReportExercise = ({ exerciseData }) => {
       <div className="start-page-column transparent">
         <div className="transparent">
           <BackButton />
-          <h2 className="exerciseName breadCrumb">{exerciseName}</h2>
+          <h2 className="exerciseName breadCrumb mt">{exerciseName}</h2>
         </div>
 
         <div className="exerciseList transparent">
-          <LastTime exercise_id={exercise_id} />
+          <LastTime exercise_id={exercise_id} reportSaved={reportSaved} />
           <div className="reportSet glass-dark">
-            <div className="set mb ">
+            <div className="set">
               <h3>
                 {" "}
                 {t("keywords.set")} {sets.length + 1}
